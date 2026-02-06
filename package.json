@@ -1,0 +1,25 @@
+{
+  "name": "heathergamble.com",
+  "version": "1.0.0",
+  "description": "Source code for heathergamble.com.",
+  "private": true,
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haagamble/heathergamble.com.git"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/haagamble/heathergamble.com/issues"
+  },
+  "homepage": "https://github.com/haagamble/heathergamble.com#readme"
+}
