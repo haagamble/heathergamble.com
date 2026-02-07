@@ -106,3 +106,52 @@ body {
   padding: 1rem 0;
   color: #666;
 }
+
+.lede {
+  font-size: 1.05rem;
+  color: #333;
+  max-width: 65ch;
+}
+
+.post-list {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.post-item {
+  padding: 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.post-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.post-title a {
+  color: #111;
+  text-decoration: none;
+}
+
+.post-title a:hover {
+  text-decoration: underline;
+}
+
+.post-meta {
+  margin: 0 0 0.75rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.post-summary {
+  margin: 0 0 0.75rem;
+  max-width: 70ch;
+}
+
+.post-readmore {
+  margin: 0;
+}

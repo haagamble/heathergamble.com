@@ -1,20 +1,35 @@
+---
+layout: base
+title: Language Learning Diary
+description: Weekly notes on what I’m trying, what works, and what I’m learning.
+---
+
 <h1>Language Learning Diary</h1>
-<p>Weekly notes on what I’m trying, what works, and what I’m learning.</p>
+<p class="lede">Weekly notes on what I’m trying, what works, and what I’m learning.</p>
 
-{% for post in collections.diary | reverse %}
-  <article>
-    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-    <p><small>{{ post.date.toDateString() }}</small></p>
+<div class="post-list">
+{%- for post in collections.diary | reverse -%}
+  <article class="post-item">
+    <h2 class="post-title">
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </h2>
 
-    {% if post.data.page.excerpt %}
-      <div>{{ post.data.page.excerpt | safe }}</div>
-    {% elseif post.data.summary %}
-      <p>{{ post.data.summary }}</p>
-    {% endif %}
+    <p class="post-meta">
+      <span class="post-date">{{ post.date.toDateString() }}</span>
+    </p>
 
-    <p><a href="{{ post.url }}">Read more →</a></p>
-    <hr>
+    {%- if post.data.page.excerpt -%}
+  <div class="post-excerpt">{{ post.data.page.excerpt | safe }}</div>
+{%- elseif post.data.summary -%}
+  <p class="post-summary">{{ post.data.summary }}</p>
+{%- endif -%}
+
+
+    <p class="post-readmore">
+      <a href="{{ post.url }}">Read more →</a>
+    </p>
   </article>
-{% endfor %}
+{%- endfor -%}
+</div>
 
-<p><a href="/">← Home</a></p>
+
