@@ -155,3 +155,8 @@ body {
 .post-readmore {
   margin: 0;
 }
+
+.hero h1 {
+  letter-spacing: -0.02em;
+}
+
