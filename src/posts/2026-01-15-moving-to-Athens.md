@@ -17,6 +17,6 @@ My goal is to post at least once a week, sometimes more. Along the way, I’ll a
 
 This is very much a work in progress — and that’s the point.
 
-About a year ago I had the opportunity to spend a week in Greece. In preparation for my trip I downloaded Duolingo and worked through some of the lessons and learned the alphabet. But I didn't use it much after that, and when I opened it to the next lesson I didn't recognize any of the words. So ...
+About a year ago I had the opportunity to spend a week in Greece. In preparation for my trip I downloaded Duolingo and worked through some of the lessons and learned the alphabet. But I didn't use the app much after that, and when I opened it today I didn't recognize any of the Greek words. So ...
 
 Day 1 - I erased my Greek progress in Duolingo and started over. It is my first day in Greece, and I did Duolingo lessons for about an hour. I'm excited about learning a new language. This was a good start for day 1. 

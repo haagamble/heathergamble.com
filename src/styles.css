@@ -160,3 +160,75 @@ body {
   letter-spacing: -0.02em;
 }
 
+.post {
+  max-width: 75ch;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+.post-header {
+  margin-bottom: 1.25rem;
+}
+
+.post-h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.post-meta {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.post-dot {
+  margin: 0 0.5rem;
+}
+
+.post-content {
+  font-size: 1.05rem;
+}
+
+.post-content p {
+  margin: 0 0 1rem;
+}
+
+.post-content h2 {
+  margin: 1.75rem 0 0.75rem;
+  line-height: 1.25;
+}
+
+.post-content ul,
+.post-content ol {
+  padding-left: 1.25rem;
+  margin: 0 0 1rem;
+}
+
+.post-content li {
+  margin: 0.25rem 0;
+}
+
+.post-content blockquote {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid #111;
+  background: #f7f7f7;
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.post-nav a {
+  text-decoration: none;
+}
+
+.post-nav a:hover {
+  text-decoration: underline;
+}
+

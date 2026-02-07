@@ -1,20 +1,25 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ title }}</title>
-</head>
-<body>
-  <article>
-    <h1>{{ title }}</h1>
+---
+layout: base
+---
 
-    <p><small>{{ page.date.toDateString() }}</small></p>
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-h1">{{ title }}</h1>
+    <p class="post-meta">
+      <span class="post-date">{{ date.toDateString() }}</span>
+      {%- if summary -%}
+        <span class="post-dot">•</span>
+        <span class="post-summary">{{ summary }}</span>
+      {%- endif -%}
+    </p>
+  </header>
 
+  <div class="post-content">
     {{ content | safe }}
-  </article>
+  </div>
 
-  <p><a href="/diary/">← Back to diary</a></p>
-  <p><a href="/">← Home</a></p>
-</body>
-</html>
+  <nav class="post-nav">
+    <a href="/diary/">← Back to diary</a>
+    <a href="/">Home</a>
+  </nav>
+</article>
