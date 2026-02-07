@@ -9,6 +9,10 @@ module.exports = function (eleventyConfig) {
     excerpt_separator: "<!-- excerpt -->"
   });
 
+  // Copy styles.css to the root of the output directory
+  eleventyConfig.addPassthroughCopy({ "src/styles.css": "styles.css" });
+
+
   return {
     dir: { input: "src", output: "_site" }
   };
