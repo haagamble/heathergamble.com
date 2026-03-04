@@ -1,3 +1,5 @@
+const { DateTime } = require("luxon");
+
 module.exports = function (eleventyConfig) {
   // Copy static folders/files straight through to _site
   eleventyConfig.addPassthroughCopy({ "src/downloads": "downloads" });
@@ -11,6 +13,12 @@ module.exports = function (eleventyConfig) {
 
   // Copy styles.css to the root of the output directory
   eleventyConfig.addPassthroughCopy({ "src/styles.css": "styles.css" });
+
+  eleventyConfig.addFilter("readableDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
+      "LLLL d, yyyy",
+    );
+  });
 
   eleventyConfig.addFilter("learningDay", function (date) {
     const start = new Date("2026-01-15");

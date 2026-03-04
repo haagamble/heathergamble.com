@@ -9,7 +9,7 @@ layout: base
       {{ title }}
     </h1>
     <p class="post-meta">
-      <span class="post-date">{{ date | date: "%B %d, %Y" }}</span>
+      <span class="post-date">{{ date | readableDate }}</span>
       {%- if summary -%}
         <span class="post-dot">•</span>
         <span class="post-summary">{{ summary }}</span>
