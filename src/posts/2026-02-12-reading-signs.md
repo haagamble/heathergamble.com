@@ -1,0 +1,17 @@
+---
+title: "Reading Signs Around Town"
+date: 2026-02-12
+tags: ["diary"]
+summary: "How reading street signs and shop names can become an easy language-learning activity."
+layout: post
+---
+
+About ten days ago, I had one of those weeks when life becomes too busy for normal language study. There was no time for Bible reading, no sessions with my AI chatbot, and no structured study plan of any kind. Instead, I turned the errands of everyday life into language practice by reading signs.
+
+We had just found a place to rent and discovered we had less than a week to set it up before our first guests arrived — our three grandkids with their parents. That meant a whirlwind of buying furniture, an oven, sheets, towels, and all the essentials that turn an empty space into a home. During those busy days we were constantly running around town comparing prices and hunting for practical things.
+
+But with language learning you learn to make the situation work for you, so I used those busy days to read signs. As we were running around town comparing prices and hunting for practical things, I started paying attention to the signs around me. I’m still working on getting more fluent with the Greek alphabet, so reading shop signs, street names, and labels was really good practice. I discovered some words that are very close to English, so they were easy to recognize, words like pharmacy, coffee, center. Others, I learned simply because I saw them over and over again — words like “street,” “entrance,” “exit,” and “cashier.”
+
+Reading signs can be a great activity at any stage of language learning. There are street signs, shop windows, billboards, building plaques — all offering words and phrases that people in the community know and understand. These are words people in the community actually use — which means they are words we need.
+
+Even during a busy week I was still able to keep learning a little. If you want to know more about how to use sign reading as a language learning activity, see this article: Reading signs.

@@ -11,8 +11,10 @@ description: Weekly notes on what I’m trying, what works, and what I’m learn
 {%- for post in collections.diary | reverse -%}
   <article class="post-item">
     <h2 class="post-title">
-      <a href="{{ post.url }}">{{ post.data.title }}</a>
-    </h2>
+  <a href="{{ post.url }}">
+    Day {{ post.date | learningDay }} — {{ post.data.title }}
+  </a>
+</h2>
 
     <p class="post-meta">
       <span class="post-date">{{ post.date.toDateString() }}</span>

@@ -6,8 +6,7 @@ summary: "Starting a new language."
 layout: post
 ---
 
-
-Today we moved to Athens. After nearly thirty years living in Central Asia, this feels like the beginning of something entirely new.  <!-- excerpt -->During those years I learned Tajik, and I picked up some Russian along the way. Language learning has been part of my daily life for a long time — not just as a learner, but as a coach walking alongside others.
+Today we moved to Athens. After nearly thirty years living in Central Asia, this feels like the beginning of something entirely new. <!-- excerpt -->During those years I learned Tajik, and I picked up some Russian along the way. Language learning has been part of my daily life for a long time — not just as a learner, but as a coach walking alongside others.
 
 Now I’m starting again, this time with Greek.
 
@@ -19,4 +18,4 @@ This is very much a work in progress — and that’s the point.
 
 About a year ago I had the opportunity to spend a week in Greece. In preparation for my trip I downloaded Duolingo and worked through some of the lessons and learned the alphabet. But I didn't use the app much after that, and when I opened it today I didn't recognize any of the Greek words. So ...
 
-Day 1 - I erased my Greek progress in Duolingo and started over. It is my first day in Greece, and I did Duolingo lessons for about an hour. I'm excited about learning a new language. This was a good start for day 1. 
+Day 1 - I erased my Greek progress in Duolingo and started over. It is my first day in Greece, and I did Duolingo lessons for about an hour. I'm excited about learning a new language. This was a good start for day 1.

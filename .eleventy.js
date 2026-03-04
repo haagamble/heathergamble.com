@@ -6,14 +6,23 @@ module.exports = function (eleventyConfig) {
   // Enable manual excerpts in front matter parsing
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,
-    excerpt_separator: "<!-- excerpt -->"
+    excerpt_separator: "<!-- excerpt -->",
   });
 
   // Copy styles.css to the root of the output directory
   eleventyConfig.addPassthroughCopy({ "src/styles.css": "styles.css" });
 
+  eleventyConfig.addFilter("learningDay", function (date) {
+    const start = new Date("2026-01-15");
+    const current = new Date(date);
+
+    const diff = current - start;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    return days + 1;
+  });
 
   return {
-    dir: { input: "src", output: "_site" }
+    dir: { input: "src", output: "_site" },
   };
 };

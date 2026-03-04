@@ -4,17 +4,19 @@ layout: base
 
 <article class="post">
   <header class="post-header">
-    <h1 class="post-h1">{{ title }}</h1>
-    <p class="post-meta">
-      {%- if day -%}
-        <strong>Day {{ day }}</strong>
-      {%- endif -%}
-      <span class="post-date">{{ date.toDateString() }}</span>
-      {%- if summary -%}
-        <span class="post-dot">•</span>
-        <span class="post-summary">{{ summary }}</span>
-      {%- endif -%}
-    </p>
+    <h1 class="post-h1">
+  <span class="day-badge">Day {{ date | learningDay }}</span>
+  {{ title }}
+</h1>
+
+<p class="post-meta">
+  <span class="post-date">{{ date | date: "%B %d, %Y" }}</span>
+
+  {%- if summary -%}
+    <span class="post-dot">•</span>
+    <span class="post-summary">{{ summary }}</span>
+  {%- endif -%}
+</p>
   </header>
 
   <div class="post-content">
