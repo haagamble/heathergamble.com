@@ -6,7 +6,7 @@ summary: "How reading street signs and shop names can become an easy language-le
 layout: post
 ---
 
-About ten days ago, I had one of those weeks when life becomes too busy for normal language study. There was no time for Bible reading, no sessions with my AI chatbot, and no structured study plan of any kind. Instead, I turned the errands of everyday life into language practice by reading signs.
+About ten days ago, I had one of those weeks when life becomes too busy for normal language study. There was no time for Bible reading, no sessions with my AI chatbot, and no structured study plan of any kind. Instead, I turned the errands of everyday life into language practice by reading signs. <!-- excerpt -->
 
 We had just found a place to rent and discovered we had less than a week to set it up before our first guests arrived — our three grandkids with their parents. That meant a whirlwind of buying furniture, an oven, sheets, towels, and all the essentials that turn an empty space into a home. During those busy days we were constantly running around town comparing prices and hunting for practical things.
 

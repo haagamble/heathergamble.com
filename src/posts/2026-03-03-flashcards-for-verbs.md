@@ -6,7 +6,11 @@ summary: "Using target-language flashcards to practice verbs and generate senten
 layout: post
 ---
 
-Today I spent about six hours working on Greek. I don’t usually have that much time available for language learning, but work was slow and I didn’t have to go anywhere. I worked on several different activities—Duolingo, writing sentences, verb flashcards, substitution drills, and writing a short paragraph about my family for AI to correct and give feedback on. I’ll write about the AI activity tomorrow. Today I want to talk about the flashcards.
+Today I made some flashcards for Greek verbs.
+
+The cards contain only Greek — no English translations. <!-- excerpt -->
+
+I spent about six hours working on Greek today. I don’t usually have that much time available for language learning, but work was slow and I didn’t have to go anywhere. I worked on several different activities—Duolingo, writing sentences, verb flashcards, substitution drills, and writing a short paragraph about my family for AI to correct and give feedback on. I’ll write about the AI activity tomorrow. Today I want to talk about the flashcards.
 
 When I started my Duolingo lessons today, they began introducing the past tense. I understand how the present tense works, but I am not yet producing many sentences on my own. Moving on to the past tense didn’t feel like the most helpful next step. Instead, I went back through earlier lessons that focused on verbs and wrote down a number of example sentences. From those sentences, I made some flashcards.
 

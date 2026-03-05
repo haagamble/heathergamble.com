@@ -1,12 +1,16 @@
 ---
-title: "Bible Reading"
+title: "Reading the Greek Bible on Day Four"
 date: 2026-01-22
 tags: ["diary"]
-summary: "Getting started with reading Greek."
+summary: "Why I began reading the Greek Bible on my fourth day of learning Greek—and why starting early can help language learners."
 layout: post
 ---
 
-I think starting to read early is an important and helpful strategy. By reading, I don’t mean simplified texts written for learners, but native texts — materials that native speakers themselves read. <!-- excerpt --> Even when comprehension is minimal, early exposure to authentic language helps learners become familiar with patterns, structure, and the written form of the language.
+On my fourth day of learning Greek, I started reading the Bible.
+
+I understood almost nothing, but that was OK. <!-- excerpt -->
+
+I think starting to read early is an important and helpful strategy. By reading, I don’t mean simplified texts written for learners, but native texts — materials that native speakers themselves read. Even when comprehension is minimal, early exposure to authentic language helps learners become familiar with patterns, structure, and the written form of the language.
 
 For Greek, I decided to begin reading the Bible. It works particularly well because it can be read alongside an English translation. I use the YouVersion app, which allows two versions to be displayed side by side. I chose a widely used Greek version paired with an English translation and decided to start with the Gospel of Matthew.
 
