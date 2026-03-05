@@ -37,4 +37,4 @@ I went through my nine flashcards twice. I created about ten sentences for each 
 
 I plan to make more verb flashcards and keep this as a regular activity a couple of times each week.
 
-If you want to see other ideas for using flashcards that stay entirely in the target language, see this article: Using Flashcards Without Translation
+If you want to see other ideas for using flashcards that stay entirely in the target language, see this article: [Using Flashcards Without Translation](/articles/using-flashcards).

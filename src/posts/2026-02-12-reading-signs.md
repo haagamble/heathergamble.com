@@ -6,7 +6,7 @@ summary: "How reading street signs and shop names can become an easy language-le
 layout: post
 ---
 
-About ten days ago, I had one of those weeks when life becomes too busy for normal language study. There was no time for Bible reading, no sessions with my AI chatbot, and no structured study plan of any kind. Instead, I turned the errands of everyday life into language practice by reading signs. <!-- excerpt -->
+Last week was one of those weeks when life became too busy for normal language study. There was very little time for Bible reading, sessions with my AI chatbot, Duolingo, or any other kind of study. I took the opportunity to turn the errands of everyday life into language practice by reading signs. <!-- excerpt -->
 
 We had just found a place to rent and discovered we had less than a week to set it up before our first guests arrived — our three grandkids with their parents. That meant a whirlwind of buying furniture, an oven, sheets, towels, and all the essentials that turn an empty space into a home. During those busy days we were constantly running around town comparing prices and hunting for practical things.
 
@@ -14,4 +14,4 @@ But with language learning you learn to make the situation work for you, so I us
 
 Reading signs can be a great activity at any stage of language learning. There are street signs, shop windows, billboards, building plaques — all offering words and phrases that people in the community know and understand. These are words people in the community actually use — which means they are words we need.
 
-Even during a busy week I was still able to keep learning a little. If you want to know more about how to use sign reading as a language learning activity, see this article: Reading signs.
+Even during a busy week I was still able to keep learning a little. If you want to know more about how to use sign reading as a language learning activity, see this article: [Reading Signs: A Simple Way to Build Vocabulary](/articles/reading-signs/).

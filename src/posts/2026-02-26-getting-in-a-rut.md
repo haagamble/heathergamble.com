@@ -11,3 +11,8 @@ This past week I slipped into a familiar kind of language‑learning rut — the
 The problem is that points were all I was chasing. I sped through lessons as quickly as possible, tapping answers without really learning them, repeating levels purely for the reward. Some days I spent two or three hours doing this — hours that looked like “study time” but didn’t actually enrich my Greek very much at all. I’m a big proponent of eclectic language learning: mixing listening, reading, speaking, real‑life interaction, and varied materials. None of that happened this week. I was using only one method, and honestly, I wasn’t even using that one well. I know better than this.
 
 So, yes… I fully recognize I’m in a rut, and I need to break out of it. And I will — just as soon as I win the tournament. After that, it’s back to real, balanced learning and back to the things that actually move me forward in Greek. This experience reminded me how easy it is to drift off course, even when you “know better.” Fortunately, next week is a fresh start. Duolingo will still be a tool that I use, but I will use it more wisely.
+
+---
+
+**Related resource:**  
+[The Perfect Language Learning Method](/resources/perfect-language-learning-method/) — some reflections on eclectic language learning.
