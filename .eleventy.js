@@ -30,6 +30,12 @@ module.exports = function (eleventyConfig) {
     return days + 1;
   });
 
+  eleventyConfig.addCollection("articles", (collectionApi) => {
+    return collectionApi
+      .getFilteredByTag("article")
+      .sort((a, b) => b.date - a.date);
+  });
+
   return {
     dir: { input: "src", output: "_site" },
   };
