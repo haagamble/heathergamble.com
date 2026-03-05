@@ -191,9 +191,10 @@ body {
 }
 
 .post-meta {
-  margin: 0;
+  font-size: 0.9rem;
   color: #666;
-  font-size: 0.95rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .post-dot {
