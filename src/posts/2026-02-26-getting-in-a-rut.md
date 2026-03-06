@@ -14,5 +14,7 @@ So, yes… I fully recognize I’m in a rut, and I need to break out of it. And 
 
 ---
 
-**Related resource:**  
+**Related resources:**  
+[Eclectic Language Learning](/articles/eclectic-language-learning).
+
 [The Perfect Language Learning Method](https://talktajiktoday.com/documents/ThePerfectLanguageLearningMethod2025.pdf) — reflections on eclectic language learning.
