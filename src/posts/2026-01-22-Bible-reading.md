@@ -1,7 +1,7 @@
 ---
 title: "Reading the Greek Bible on Day Four"
 date: 2026-01-24
-tags: ["diary"]
+tags: ["diary", "reading"]
 summary: "Why I began reading the Greek Bible on my fourth day of learning Greek—and why starting early can help language learners."
 layout: post
 ---

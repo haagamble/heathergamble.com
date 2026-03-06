@@ -1,7 +1,7 @@
 ---
 title: "Reading Signs Around Town"
 date: 2026-02-12
-tags: ["diary"]
+tags: ["diary", "reading"]
 summary: "How reading street signs and shop names can become an easy language-learning activity."
 layout: post
 ---

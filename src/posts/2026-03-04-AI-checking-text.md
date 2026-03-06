@@ -1,7 +1,7 @@
 ---
 title: "AI corrects my sentences"
 date: 2026-03-04
-tags: ["diary"]
+tags: ["diary", "ai", "writing"]
 summary: "Using an AI chatbot to correct your written work."
 layout: post
 ---
