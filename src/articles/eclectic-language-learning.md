@@ -1,6 +1,6 @@
 ---
 title: "What Is Eclectic Language Learning?"
-date: 2026-03-12
+date: 2026-02-26
 tags: ["article"]
 summary: "An introduction to the eclectic approach to language learning."
 layout: article
