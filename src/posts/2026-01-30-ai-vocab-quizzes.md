@@ -56,8 +56,6 @@ After that I kept going with different categories:
 - abstract nouns
 - things that can be opened
 
-The quizzes were simple, but they were exactly what I needed. It was a relaxed way to review vocabulary and pick up a few new words without feeling like I was doing heavy study.
-
-This turned out to be a perfect activity for a day when I was feeling tired. Instead of pushing through something difficult, I was still able to practice Greek and learn a little more vocabulary in a laid-back way.
+The quizzes were simple, but they were exactly what I needed. It was a relaxed way to review vocabulary and pick up a few new words without feeling like I was doing heavy study. It was the perfect activity to start with on a day when I was feeling tired.
 
 Activities like this are another example of how AI tools can easily be incorporated into an eclectic language learning routine.
