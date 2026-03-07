@@ -23,11 +23,11 @@ I've only been learning Greek for about 10 days now, so that was obviously too m
 
 I didn't know how ChatGPT would handle my request, but it gave such a good response. It gave me several steps.
 
-## Step 1: Understand every word
+### Step 1: Understand every word
 
 It started by giving me the pronunciation and the meaning of each word in a chart.
 
-## Step 2: Say it in small chunks (out loud)
+### Step 2: Say it in small chunks (out loud)
 
 It gave me small chunks.
 
@@ -37,15 +37,15 @@ It gave me small chunks.
 
 It told me to say each chunk 3-4 times. Then it put the chunks together into a sentence and told me to repeat that.
 
-## Step 3: Notice the pattern
+### Step 3: Notice the pattern
 
 It pointed out the words that were repeated and the words that were different.
 
-## Step 4: Gentle daily drill (2 minutes)
+### Step 4: Gentle daily drill (2 minutes)
 
 It told me a few ways to practice daily.
 
-## Step 5: One small challenge (to lock it in)
+### Step 5: One small challenge (to lock it in)
 
 It gave me part of each sentence and told me to try to write the rest.
 
