@@ -1,12 +1,12 @@
 ---
 title: "The Duolingo Tournament Rut"
-date: 2026-02-26
+date: 2026-02-28
 tags: ["diary"]
 summary: "A reminder that gamified language learning can sometimes pull us away from real progress."
 layout: post
 ---
 
-This past week I slipped into a familiar kind of language-learning rut — the kind that looks productive from the outside but doesn’t actually help very much.
+This week I slipped into a familiar kind of language-learning rut — the kind that looks productive from the outside but doesn’t actually help very much.
 
 I’ve been using Duolingo for Greek, and if you’ve used the app, you know how skillfully they gamify everything: leagues, levels, bright little fireworks when you win. <!-- excerpt -->
 

@@ -1,6 +1,6 @@
 ---
 title: "Six Sentences to Break the Silence"
-date: 2026-02-28
+date: 2026-03-01
 tags: ["diary", "ai"]
 summary: "Using a small set of memorized personal sentences to break out of a rut and get talking."
 layout: post
