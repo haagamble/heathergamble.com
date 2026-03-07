@@ -22,7 +22,7 @@ My goal is to post at least once a week, sometimes more. Along the way I’ll al
 
 This is very much a **work in progress** — and that’s the point.
 
-## A Small Head Start
+## Starting Over
 
 About a year ago I had the opportunity to spend a week in Greece. In preparation for that trip I downloaded Duolingo, worked through some lessons, and learned the alphabet.
 
