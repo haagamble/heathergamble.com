@@ -8,7 +8,7 @@ layout: post
 
 I've been having fun with the AI vocabulary quizzes I described in my earlier post. <!-- excerpt -->
 
-If you want to see how the activity works, you can read that post here: [Asking an AI Chatbot to Quiz Me](/posts/2026-01-30-ai-vocab-quizzes/).
+If you want to see how the activity works, you can read that post here: [Asking an AI Chatbot to Quiz Me](/diary/ai-vocab-quizzes/).
 
 Since then I’ve been doing a few quizzes each day. Sometimes I repeat earlier categories for review, and sometimes I just try to think of interesting new categories.
 

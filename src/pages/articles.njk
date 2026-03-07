@@ -2,6 +2,7 @@
 layout: base
 title: Articles
 description: Practical language-learning activities and frameworks.
+permalink: /articles/
 ---
 
 <h1>Articles</h1>
@@ -17,7 +18,7 @@ description: Practical language-learning activities and frameworks.
       <p class="post-meta">
         <span class="post-date">{{ item.date | readableDate }}</span>
         {%- if item.data.summary -%}
-          <span class="post-dot">•</span>
+          <span class="post-dot">-</span>
           <span class="post-summary">{{ item.data.summary }}</span>
         {%- endif -%}
       </p>
@@ -27,7 +28,7 @@ description: Practical language-learning activities and frameworks.
       {%- endif -%}
 
       <p class="post-readmore">
-        <a href="{{ item.url }}">Read →</a>
+        <a href="{{ item.url }}">Read -></a>
       </p>
     </article>
   {%- endfor -%}
