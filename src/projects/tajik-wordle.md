@@ -1,7 +1,7 @@
 ---
 title: "Tajik Wordle"
 summary: "A Tajik word puzzle game inspired by Wordle."
-status: "In Progress"
+status: "Live"
 type: "Game"
 order: 2
 external_url: "https://tajik-wordle.netlify.app/"

@@ -1,7 +1,7 @@
 ---
 title: "First 1000 Words Vocab Game"
 summary: "A vocabulary game focused on mastering the first 1000 high-frequency words."
-status: "Planning"
+status: "Live"
 type: "Learning Tool"
 order: 3
 external_url: "https://games.talktajiktoday.com/"
