@@ -1,36 +1,32 @@
 ---
 layout: base
 title: Projects
-description: Things I'm building and exploring.
+description: Projects I am building and sharing.
 permalink: /projects/
 ---
 
 <h1>Projects</h1>
+<p class="lede">A growing collection of language-learning projects, tools, and experiments.</p>
 
-<p class="lede">
-  This page will eventually showcase some of the projects I'm working on.
-</p>
+<div class="project-grid">
+  {%- for project in collections.projects -%}
+    <a class="project-card" href="{{ project.url }}">
+      <div class="project-card-top">
+        <h2>{{ project.data.title }}</h2>
+        {%- if project.data.status -%}
+          <span class="project-status">{{ project.data.status }}</span>
+        {%- endif -%}
+      </div>
 
-<p>
-  I enjoy experimenting with ideas and learning new tools. Some of those
-  experiments turn into small projects - language-learning resources, AI
-  experiments, websites, or other creative work.
-</p>
+      {%- if project.data.type -%}
+        <p class="project-type">{{ project.data.type }}</p>
+      {%- endif -%}
 
-<p>
-  I'm still building this section, but here are a few things that will likely
-  appear here in the future:
-</p>
+      {%- if project.data.summary -%}
+        <p>{{ project.data.summary }}</p>
+      {%- endif -%}
 
-<ul>
-  <li>Language-learning tools and activities</li>
-  <li>Experiments using AI for learning</li>
-  <li>Website and coding projects</li>
-  <li>Creative projects and hobbies</li>
-</ul>
-
-<p>
-  For now, the best place to follow what I'm doing is the
-  <a href="/diary/">Language Learning Diary</a>, where I write about what I'm
-  currently learning and experimenting with.
-</p>
+      <p class="project-read">View project details -></p>
+    </a>
+  {%- endfor -%}
+</div>

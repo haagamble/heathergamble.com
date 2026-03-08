@@ -36,6 +36,14 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => b.date - a.date);
   });
 
+  eleventyConfig.addCollection("projects", (collectionApi) => {
+    return collectionApi.getFilteredByTag("project").sort((a, b) => {
+      const aOrder = typeof a.data.order === "number" ? a.data.order : 999;
+      const bOrder = typeof b.data.order === "number" ? b.data.order : 999;
+      return aOrder - bOrder;
+    });
+  });
+
   return {
     dir: { input: "src", output: "_site" },
   };

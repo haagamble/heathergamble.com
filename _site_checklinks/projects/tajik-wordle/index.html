@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>{{ title or "Heather Gamble" }}</title>
+    <title>Tajik Wordle</title>
     <meta
       name="description"
-      content="{{ description or 'Language learning diary and resources.' }}"
+      content="Language learning diary and resources."
     />
     <link rel="stylesheet" href="/styles.css" />
   </head>
@@ -23,7 +23,27 @@
     </header>
 
     <main class="container">
-      {{ content | safe }}
+      
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-h1">Tajik Wordle</h1>
+
+    <p class="post-meta"><span class="project-status">In Progress</span><span class="post-dot">-</span>
+        <span>Game</span></p>
+  </header>
+
+  <div class="post-content">
+    <p>Tajik Wordle is a word puzzle game project for Tajik learners.</p>
+<p>This was the first time I forked somebody's code to use as the started code for my own project.</p>
+<p>I will write more about that soon. In the meantime, check it out: https://tajik-wordle.netlify.app/</p>
+</div>
+
+  <nav class="post-nav">
+    <a href="/projects/"><- Back to projects</a>
+    <a href="/">Home</a>
+  </nav>
+</article>
+
     </main>
 
     <footer class="site-footer">

@@ -1,0 +1,32 @@
+---
+layout: base
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-h1">{{ title }}</h1>
+
+    <p class="post-meta">
+      {%- if status -%}
+        <span class="project-status">{{ status }}</span>
+      {%- endif -%}
+      {%- if type -%}
+        <span class="post-dot">-</span>
+        <span>{{ type }}</span>
+      {%- endif -%}
+    </p>
+  </header>
+
+  <div class="post-content">
+    {{ content | safe }}
+
+    {%- if external_url -%}
+      <p><strong>Visit project:</strong> <a href="{{ external_url }}" target="_blank" rel="noopener noreferrer">{{ external_url }}</a></p>
+    {%- endif -%}
+  </div>
+
+  <nav class="post-nav">
+    <a href="/projects/"><- Back to projects</a>
+    <a href="/">Home</a>
+  </nav>
+</article>
