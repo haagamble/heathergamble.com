@@ -7,8 +7,14 @@ order: 3
 external_url: "https://games.talktajiktoday.com/"
 ---
 
-This project is a vocabulary game designed to help learners acquire the first 1000 words in a target language.
+## Overview
 
-This was my first project where I heavily relied on AI. I used a combination of Claude code and Github Copilot.
+This project is a set of vocabulary activities designed to help language learners acquire the first 1,000 high-frequency words in Tajik. Choose from flashcards, memory game, word-search, and multiple choice quiz. The goal is to make early vocabulary learning more interactive and fun.
 
-Check back later to read more about it. You can check out the finished project here: [First 1000 Words Game](https://games.talktajiktoday.com/).
+## How It Was Built
+
+This was the first project where I relied heavily on AI-assisted coding. I used a combination of AI tools, including Claude Code and GitHub Copilot, to help generate code, experiment with ideas, and quickly prototype features.
+
+## Try the Game
+
+[First 1000 Words Game](https://games.talktajiktoday.com/)
