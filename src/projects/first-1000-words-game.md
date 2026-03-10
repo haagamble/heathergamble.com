@@ -1,6 +1,6 @@
 ---
 title: "First 1000 Words Vocab Game"
-summary: "A vocabulary game focused on mastering the first 1000 high-frequency words."
+summary: "A vocabulary game focused on mastering the first 1000 high-frequency words in Tajik."
 status: "Live"
 type: "Learning Tool"
 order: 3
