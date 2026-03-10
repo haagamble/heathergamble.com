@@ -8,28 +8,40 @@ permalink: /articles/
 <h1>Articles</h1>
 <p class="lede">Practical language-learning activities and frameworks you can use with any language.</p>
 
-<div class="post-list">
-  {%- for item in collections.articles -%}
-    <article class="post-item">
-      <h2 class="post-title">
-        <a href="{{ item.url }}">{{ item.data.title }}</a>
-      </h2>
+{% set sections = [
+  {
+    title: "Start Here",
+    slugs: ["eclectic-language-learning"]
+  },
+  {
+    title: "Practical Techniques",
+    slugs: [
+      "using-flashcards",
+      "using-a-photo-book-for-language-learning",
+      "substitution-drills"
+    ]
+  },
+  {
+    title: "Learning from Everyday Life",
+    slugs: ["reading-signs"]
+  },
+  {
+    title: "Ideas / Concepts",
+    slugs: ["glue"]
+  }
+] %}
 
-      <p class="post-meta">
-        <span class="post-date">{{ item.date | readableDate }}</span>
-        {%- if item.data.summary -%}
-          <span class="post-dot">-</span>
-          <span class="post-summary">{{ item.data.summary }}</span>
-        {%- endif -%}
-      </p>
-
-      {%- if item.data.excerpt -%}
-        <p class="post-summary">{{ item.data.excerpt | safe }}</p>
-      {%- endif -%}
-
-      <p class="post-readmore">
-        <a href="{{ item.url }}">Read -></a>
-      </p>
-    </article>
-  {%- endfor -%}
-</div>
+{% for section in sections %}
+  <section class="article-section">
+    <h2>{{ section.title }}</h2>
+    <ul class="article-links">
+      {% for slug in section.slugs %}
+        {% for item in collections.articles %}
+          {% if item.fileSlug == slug %}
+            <li><a href="{{ item.url }}">{{ item.data.navTitle }}</a></li>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </section>
+{% endfor %}

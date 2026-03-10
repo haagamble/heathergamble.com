@@ -1,6 +1,5 @@
 ---
 title: "Using Flashcards Without Translation"
-date: 2026-03-03
 tags: ["article", "activity"]
 summary: "Flashcards can be a powerful language learning tool when used without translation. Here are several practical ways to use them."
 layout: article
@@ -45,8 +44,8 @@ For example:
 Side A: the target-language word
 
 Side B:
-• a short sentence using the word
-• a synonym or description
+â€¢ a short sentence using the word
+â€¢ a synonym or description
 
 When you review the card, look at the word. If it is a noun try to imagine it. Then try to say a sentence using the word. If you can't remember what the word means, read the clues and see if you that helps. If the clues are not sufficient you will have to resort to looking up the word in a dictionary and then trying to put more clues so that you don't have to resort to translating the next time the word comes up.
 
@@ -68,12 +67,12 @@ When practicing, first look at the verb and try to create several sentences of y
 
 After that, create additional sentences using the same patterns.
 
-For example, if the card includes the sentence “I want eight cats,” you might practice with other numbers and nouns:
+For example, if the card includes the sentence â€œI want eight cats,â€ you might practice with other numbers and nouns:
 
 - I want seven cats.
 - He wants three cars.
 
-If another sentence is “The baby doesn’t want the apple,” you can practice making negative sentences as well.
+If another sentence is â€œThe baby doesnâ€™t want the apple,â€ you can practice making negative sentences as well.
 
 This approach turns a single flashcard into a small speaking exercise.
 

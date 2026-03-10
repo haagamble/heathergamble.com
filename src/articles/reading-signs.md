@@ -1,6 +1,5 @@
 ---
 title: "Reading Signs: A Simple Way to Build Vocabulary"
-date: 2026-02-12
 tags: ["article", "activity"]
 summary: "A practical activity that turns everyday places into opportunities for reading and vocabulary growth."
 layout: article
