@@ -25,6 +25,7 @@ _(model: GPT-5.1)_
 ### 1. Can you help me learn these verbs?
 
 **It printed out the list of words in the chat.** I thought that was helpful. I can either cut and paste the list into a document or make screenshots of the list and keep them in a photo album dedicated to vocabulary.
+
 **It suggested a daily practice routine** to help me learn. Some of the advice was not helpful, for example:  
  _“When you study, say the whole group several times in Greek only, then in English only.”_
 
@@ -51,15 +52,19 @@ _(model: Gemini 3 Flash)_
 ### 1. Can you help me learn these verbs?
 
 **It grouped some of the verbs into categories** like daily actions, senses, and motion, and suggested learning those mini-sets.
+
 **It gave some tips about pronunciation.**
+
 **It suggested building two-word sentences.** This was less helpful because creating sentences would be hard if I didn’t know how to decline the verbs.
+
 **It asked whether I wanted it to create** a short practice quiz or show me how to conjugate one of the verbs. I liked these suggestions. I thought it was good that the chatbot took the initiative.
 
 ### 2. Can you make flash cards for these words?
 
 **It created a list called “Greek Verb flash cards”** in Google Keep.
 I could click the list and open it in the Google Keep app (which I had never used before).
-It was a list with checkboxes. When I checked the ones I knew, they moved down below to the **Checked Items** section.
+It was a list with checkboxes. When I checked the ones I knew, they moved down below to the "Checked Items" section.
+
 _But it wasn’t flash cards._
 
 _(See the next section for how it eventually created flash cards.)_
@@ -75,7 +80,7 @@ After finishing the quiz it offered options to **Keep Learning**:
 - Review quiz
 - More questions
 
-The **More questions** option allowed me to create a new quiz with 5, 10, or 20 questions.
+The "More questions" option allowed me to create a new quiz with 5, 10, or 20 questions.
 
 When I clicked "flash cards", it created a flash card app with "25 verbs"! Why didn't it do that when I asked if it could make flash cards earlier?
 
@@ -83,7 +88,7 @@ Features:
 
 - Greek word on one side, English on the other
 - No extra text
-- Option to **Track learning**
+- Option to Track learning
 - Mark yourself right or wrong
 - Practice the ones you got wrong
 
@@ -129,10 +134,10 @@ It took several minutes to generate, but the result was very good.
 
 Features:
 
-- Option to study **all words** or **one group**
+- Option to study all words or one group
 - Option to mark whether you know the word
-- Uses **all 47 words**
-- Words appear in a **different order each time**
+- Uses all 47 words
+- Words appear in a different order each time
 
 **It also offers publishing options:**
 
@@ -166,9 +171,12 @@ _(model: unknown)_
 
 ### 1. Can you help me learn these verbs?
 
-**It explained how to conjugate the verbs**.
+**It explained how to conjugate the verbs.**
+
 **It gave sample sentences.**
+
 **It grouped the verbs** into categories and highlighted high-frequency verbs to learn first.
+
 **It explained that some verbs have two forms**, which went beyond my list.
 
 **Then it suggested study activities:**
@@ -188,7 +196,7 @@ Features:
 - Option to repeat
 - Option to share
 
-The cards always appear in the **same order**.
+The cards always appear in the same order.
 
 You can see the flash card app here:  
 https://copilot.microsoft.com/shares/bi64fyNTieWCYMVba3tqi
@@ -202,7 +210,7 @@ https://copilot.microsoft.com/shares/bi64fyNTieWCYMVba3tqi
 **It gave me an option to share the quiz,** but when I tested the shared quiz:
 
 - the first quiz used verbs from my list
-- new quizzes sometimes included verbs **not from my list**
+- new quizzes sometimes included verbs not from my list
 
 You can see the quiz app here:  
 https://copilot.microsoft.com/shares/yaCz8p9VaQx3FtGDaLGbV
@@ -216,10 +224,14 @@ _(model: Auto – GPT-5.3 or 5.4)_
 ### 1. Can you help me learn these verbs?
 
 **It suggested which verbs to learn first.**
+
 **It gave sample sentences.**
+
 **It explained how to conjugate them.**
-**It gave a **5-question mini-quiz** in the chat.
-**It offered to make a **5-minute drill**.
+
+**It gave a 5-question mini-quiz** in the chat.
+
+**It offered to make a **5-minute drill\*\*.
 
 It did **not offer flash cards or a quiz**.
 
@@ -236,9 +248,7 @@ It did **not offer flash cards or a quiz**.
 
 **It created a 15-question quiz** in the chat.
 
-Instructions:
-
-> Write the answers like: 1. A, 2. B…
+Instructions: Write the answers like: 1. A, 2. B…
 
 After scoring the quiz it **immediately generated another quiz**, this time English → Greek.
 
@@ -288,3 +298,7 @@ When asked to make flash cards and a quiz it created _excellent apps_:
 - randomized the order
 - work well
 - shareable
+
+### Best Overall
+
+- **Winner:** Claude
