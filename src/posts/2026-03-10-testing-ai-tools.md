@@ -6,7 +6,7 @@ summary: "I tested several AI tools—Perplexity, Gemini, Claude, Copilot, and C
 layout: post
 ---
 
-Today I wanted some help learning a list of verbs, and I have also been wanting to do a comparison of AI tools, so this seemed like the perfect test.
+Today I wanted some help learning a list of verbs, and I have also been wanting to do a comparison of AI tools, so this seemed like the perfect test. <!-- excerpt -->
 
 To begin, I uploaded a photo of my handwritten list of verbs into the chat. There are **47 words** in the list, but **4 of them only have the English, not the Greek**.
 
@@ -144,8 +144,8 @@ Features:
 - Only you have access
 - Anyone with the link
 
-You can see the flash card app8 here:  
-https://claude.ai/public/artifacts/6c02d916-68ce-4e0e-a93e-6f0ead2d4a40
+You can see the flash card app here:  
+[Claude flash cards](https://claude.ai/public/artifacts/6c02d916-68ce-4e0e-a93e-6f0ead2d4a40)
 
 ### 3. Can you make me a multiple choice quiz to learn the words?
 
@@ -161,7 +161,7 @@ Example:
 I selected "Work & Daily Life". That category had 6 verbs, so the quiz became 6 questions.
 
 You can see the quiz app here:  
-https://claude.ai/public/artifacts/af58c6f4-2cde-4da7-8b82-f08a8cad5013
+[Claude multiple-choice quiz](https://claude.ai/public/artifacts/af58c6f4-2cde-4da7-8b82-f08a8cad5013)
 
 ---
 
@@ -198,8 +198,7 @@ Features:
 
 The cards always appear in the same order.
 
-You can see the flash card app here:  
-https://copilot.microsoft.com/shares/bi64fyNTieWCYMVba3tqi
+You can see the flash card app here: [Copilot flash cards](https://copilot.microsoft.com/shares/bi64fyNTieWCYMVba3tqi)
 
 ### 3. Can you make me a multiple choice quiz to learn the words?
 
@@ -212,8 +211,7 @@ https://copilot.microsoft.com/shares/bi64fyNTieWCYMVba3tqi
 - the first quiz used verbs from my list
 - new quizzes sometimes included verbs not from my list
 
-You can see the quiz app here:  
-https://copilot.microsoft.com/shares/yaCz8p9VaQx3FtGDaLGbV
+You can see the quiz app here: [Copilot multiple-choice quiz](https://copilot.microsoft.com/shares/yaCz8p9VaQx3FtGDaLGbV)
 
 ---
 
