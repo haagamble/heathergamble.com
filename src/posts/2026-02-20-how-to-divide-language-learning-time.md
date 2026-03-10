@@ -1,7 +1,7 @@
 ---
 title: "How to Divide Your Language-Learning Time"
 date: 2026-02-20
-tags: ["diary", "speaking", "listening", "reading"]
+tags: ["diary", "speaking", "listening", "reading", "writing"]
 summary: "summary: Some reflections on how language-learning time can be divided between study, community use, input, and output."
 layout: post
 ---

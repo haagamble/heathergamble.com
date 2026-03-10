@@ -14,8 +14,7 @@ permalink: /articles/
     items: [
       {
         slug: "eclectic-language-learning",
-        title: "Eclectic Language Learning",
-        description: "A flexible framework for combining multiple language-learning methods effectively."
+        title: "Eclectic Language Learning"
       }
     ]
   },
@@ -24,18 +23,15 @@ permalink: /articles/
     items: [
       {
         slug: "using-flashcards",
-        title: "Using Flashcards",
-        description: "How to use flashcards in a way that strengthens memory and supports real language use."
+        title: "Using Flashcards"
       },
       {
         slug: "using-a-photo-book-for-language-learning",
-        title: "Using a Photo Book for Language Learning",
-        description: "How photo books can help you create resources for listening."
+        title: "Using a Photo Book for Language Learning"
       },
       {
         slug: "substitution-drills",
-        title: "Substitution Drills",
-        description: "A structured technique for practicing sentence patterns until they become natural."
+        title: "Substitution Drills"
       }
     ]
   },
@@ -44,8 +40,7 @@ permalink: /articles/
     items: [
       {
         slug: "reading-signs",
-        title: "Reading Signs",
-        description: "How everyday signs, labels, and public notices can become useful language input."
+        title: "Reading Signs"
       }
     ]
   },
@@ -54,8 +49,7 @@ permalink: /articles/
     items: [
       {
         slug: "glue",
-        title: "Glue",
-        description: "Get-Learn-Use-Evaluate: A tool to help guide your daily language learning"
+        title: "Glue"
       }
     ]
   }
@@ -70,7 +64,9 @@ permalink: /articles/
           {% if item.fileSlug == entry.slug %}
             <article class="article-list-item">
               <h3 class="article-list-title"><a href="{{ item.url }}">{{ entry.title }}</a></h3>
-              <p class="article-list-description">{{ entry.description }}</p>
+              {% if item.data.summary %}
+                <p class="article-list-description">{{ item.data.summary }}</p>
+              {% endif %}
             </article>
           {% endif %}
         {% endfor %}

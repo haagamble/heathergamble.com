@@ -1,7 +1,7 @@
 ---
 title: "Using a Photo Book for Language Learning"
 tags: ["article", "speaking", "listening"]
-summary: "A simple but powerful language-learning activity: using a photo book to generate conversation, practice grammar, and build vocabulary."
+summary: "A simple method for creating listening practice and structured language activities using a photo book."
 layout: article
 ---
 
