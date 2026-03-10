@@ -2,7 +2,19 @@ const { DateTime } = require("luxon");
 
 const TAG_LABELS = {
   ai: "AI",
+  flashcards: "Flash cards",
 };
+
+const DIARY_TAG_ORDER = [
+  "reading",
+  "writing",
+  "listening",
+  "speaking",
+  "grammar",
+  "vocabulary",
+  "flashcards",
+  "ai",
+];
 
 function getVisibleTags(tags = []) {
   return tags.filter((tag) => tag !== "diary");
@@ -66,7 +78,18 @@ module.exports = function (eleventyConfig) {
       getVisibleTags(item.data.tags || []).forEach((tag) => tags.add(tag));
     });
 
-    return Array.from(tags).sort((a, b) => formatTag(a).localeCompare(formatTag(b)));
+        return Array.from(tags).sort((a, b) => {
+      const aIndex = DIARY_TAG_ORDER.indexOf(a);
+      const bIndex = DIARY_TAG_ORDER.indexOf(b);
+      const aRank = aIndex === -1 ? Number.MAX_SAFE_INTEGER : aIndex;
+      const bRank = bIndex === -1 ? Number.MAX_SAFE_INTEGER : bIndex;
+
+      if (aRank !== bRank) {
+        return aRank - bRank;
+      }
+
+      return formatTag(a).localeCompare(formatTag(b));
+    });
   });
 
   return {
