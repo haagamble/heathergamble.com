@@ -11,37 +11,70 @@ permalink: /articles/
 {% set sections = [
   {
     title: "Start Here",
-    slugs: ["eclectic-language-learning"]
+    items: [
+      {
+        slug: "eclectic-language-learning",
+        title: "Eclectic Language Learning",
+        description: "A flexible framework for combining multiple language-learning methods effectively."
+      }
+    ]
   },
   {
     title: "Practical Techniques",
-    slugs: [
-      "using-flashcards",
-      "using-a-photo-book-for-language-learning",
-      "substitution-drills"
+    items: [
+      {
+        slug: "using-flashcards",
+        title: "Using Flashcards",
+        description: "How to use flashcards in a way that strengthens memory and supports real language use."
+      },
+      {
+        slug: "using-a-photo-book-for-language-learning",
+        title: "Using a Photo Book for Language Learning",
+        description: "How photo books can help you create resources for listening."
+      },
+      {
+        slug: "substitution-drills",
+        title: "Substitution Drills",
+        description: "A structured technique for practicing sentence patterns until they become natural."
+      }
     ]
   },
   {
     title: "Learning from Everyday Life",
-    slugs: ["reading-signs"]
+    items: [
+      {
+        slug: "reading-signs",
+        title: "Reading Signs",
+        description: "How everyday signs, labels, and public notices can become useful language input."
+      }
+    ]
   },
   {
     title: "Ideas / Concepts",
-    slugs: ["glue"]
+    items: [
+      {
+        slug: "glue",
+        title: "Glue",
+        description: "Get-Learn-Use-Evaluate: A tool to help guide your daily language learning"
+      }
+    ]
   }
 ] %}
 
 {% for section in sections %}
   <section class="article-section">
     <h2>{{ section.title }}</h2>
-    <ul class="article-links">
-      {% for slug in section.slugs %}
+    <div class="article-list">
+      {% for entry in section.items %}
         {% for item in collections.articles %}
-          {% if item.fileSlug == slug %}
-            <li><a href="{{ item.url }}">{{ item.data.navTitle }}</a></li>
+          {% if item.fileSlug == entry.slug %}
+            <article class="article-list-item">
+              <h3 class="article-list-title"><a href="{{ item.url }}">{{ entry.title }}</a></h3>
+              <p class="article-list-description">{{ entry.description }}</p>
+            </article>
           {% endif %}
         {% endfor %}
       {% endfor %}
-    </ul>
+    </div>
   </section>
 {% endfor %}
