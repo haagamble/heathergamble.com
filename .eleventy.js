@@ -1,5 +1,17 @@
 const { DateTime } = require("luxon");
 
+const TAG_LABELS = {
+  ai: "AI",
+};
+
+function getVisibleTags(tags = []) {
+  return tags.filter((tag) => tag !== "diary");
+}
+
+function formatTag(tag = "") {
+  return TAG_LABELS[tag] || tag.replace(/(^|-)([a-z])/g, (_, prefix, letter) => `${prefix}${letter.toUpperCase()}`);
+}
+
 module.exports = function (eleventyConfig) {
   // Copy static folders/files straight through to _site
   eleventyConfig.addPassthroughCopy({ "src/downloads": "downloads" });
@@ -30,6 +42,9 @@ module.exports = function (eleventyConfig) {
     return days + 1;
   });
 
+  eleventyConfig.addFilter("visibleTags", (tags) => getVisibleTags(tags || []));
+  eleventyConfig.addFilter("formatTag", (tag) => formatTag(tag));
+
   eleventyConfig.addCollection("articles", (collectionApi) => {
     return collectionApi
       .getFilteredByTag("article")
@@ -42,6 +57,16 @@ module.exports = function (eleventyConfig) {
       const bOrder = typeof b.data.order === "number" ? b.data.order : 999;
       return aOrder - bOrder;
     });
+  });
+
+  eleventyConfig.addCollection("diaryTags", (collectionApi) => {
+    const tags = new Set();
+
+    collectionApi.getFilteredByTag("diary").forEach((item) => {
+      getVisibleTags(item.data.tags || []).forEach((tag) => tags.add(tag));
+    });
+
+    return Array.from(tags).sort((a, b) => formatTag(a).localeCompare(formatTag(b)));
   });
 
   return {

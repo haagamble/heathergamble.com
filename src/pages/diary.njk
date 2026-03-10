@@ -8,9 +8,19 @@ permalink: /diary/
 <h1>Language Learning Diary</h1>
 <p class="lede">Notes from my journey learning Greek in Athens - what I'm trying, what works, and what I'm learning along the way.</p>
 
-<div class="post-list">
+<div class="tag-filters" aria-label="Filter diary posts by tag">
+  <a class="tag-filter-link is-active" href="/diary/" data-tag-filter="all">All</a>
+  {%- for tag in collections.diaryTags -%}
+    <a class="tag-filter-link" href="/diary/?tag={{ tag }}" data-tag-filter="{{ tag }}">{{ tag | formatTag }}</a>
+  {%- endfor -%}
+</div>
+
+<p class="tag-filter-status" data-filter-status></p>
+
+<div class="post-list" data-diary-posts>
 {%- for post in collections.diary | reverse -%}
-  <article class="post-item">
+  {%- set postTags = post.data.tags | visibleTags -%}
+  <article class="post-item" data-tags="{{ postTags | join('|') }}">
     <h2 class="post-title">
       <a href="{{ post.url }}">
         Day {{ post.date | learningDay }} - {{ post.data.title }}
@@ -27,9 +37,52 @@ permalink: /diary/
       <p class="post-summary">{{ post.data.summary }}</p>
     {%- endif -%}
 
+    {%- if postTags.length -%}
+      <p class="post-tags">
+        <span class="post-tags-label">Tags:</span>
+        {%- for tag in postTags -%}
+          <a class="tag-link" href="/diary/?tag={{ tag }}">{{ tag | formatTag }}</a>{% if not loop.last %}<span class="tag-separator">&bull;</span>{% endif %}
+        {%- endfor -%}
+      </p>
+    {%- endif -%}
+
     <p class="post-readmore">
       <a href="{{ post.url }}">Read more -></a>
     </p>
   </article>
 {%- endfor -%}
 </div>
+
+<script>
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const selectedTag = (params.get("tag") || "all").toLowerCase();
+    const posts = Array.from(document.querySelectorAll("[data-diary-posts] .post-item"));
+    const filters = Array.from(document.querySelectorAll("[data-tag-filter]"));
+    const status = document.querySelector("[data-filter-status]");
+
+    let visibleCount = 0;
+
+    posts.forEach((post) => {
+      const tags = (post.dataset.tags || "").split("|").filter(Boolean);
+      const matches = selectedTag === "all" || tags.includes(selectedTag);
+      post.hidden = !matches;
+      if (matches) visibleCount += 1;
+    });
+
+    filters.forEach((filter) => {
+      filter.classList.toggle("is-active", filter.dataset.tagFilter === selectedTag || (selectedTag === "all" && filter.dataset.tagFilter === "all"));
+    });
+
+    if (!status) return;
+
+    if (selectedTag === "all") {
+      status.textContent = `Showing all ${visibleCount} posts.`;
+      return;
+    }
+
+    const activeFilter = filters.find((filter) => filter.dataset.tagFilter === selectedTag);
+    const label = activeFilter ? activeFilter.textContent : selectedTag;
+    status.textContent = `Showing ${visibleCount} posts tagged ${label}.`;
+  })();
+</script>

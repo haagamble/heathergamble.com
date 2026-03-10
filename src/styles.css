@@ -372,3 +372,59 @@ body {
   margin: 0;
   color: #444;
 }
+.tag-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.tag-filter-link,
+.tag-link {
+  color: #1f4b99;
+  text-decoration: none;
+}
+
+.tag-filter-link {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid #d5dbe7;
+  border-radius: 999px;
+  background: #f7f9fc;
+  font-size: 0.92rem;
+}
+
+.tag-filter-link:hover,
+.tag-link:hover {
+  text-decoration: underline;
+}
+
+.tag-filter-link.is-active {
+  background: #1f4b99;
+  border-color: #1f4b99;
+  color: #fff;
+  text-decoration: none;
+}
+
+.tag-filter-status {
+  margin: 0 0 1rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.post-tags {
+  margin: 0.75rem 0 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.post-tags-label {
+  font-weight: 600;
+  color: #333;
+  margin-right: 0.35rem;
+}
+
+.tag-separator {
+  margin: 0 0.4rem;
+  color: #999;
+}

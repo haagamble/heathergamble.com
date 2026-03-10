@@ -11,10 +11,20 @@ layout: base
     <p class="post-meta">
       <span class="post-date">{{ date | readableDate }}</span>
       {%- if summary -%}
-        <span class="post-dot">•</span>
+        <span class="post-dot">&bull;</span>
         <span class="post-summary">{{ summary }}</span>
       {%- endif -%}
     </p>
+
+    {%- set postTags = tags | visibleTags -%}
+    {%- if postTags.length -%}
+      <p class="post-tags">
+        <span class="post-tags-label">Tags:</span>
+        {%- for tag in postTags -%}
+          <a class="tag-link" href="/diary/?tag={{ tag }}">{{ tag | formatTag }}</a>{% if not loop.last %}<span class="tag-separator">&bull;</span>{% endif %}
+        {%- endfor -%}
+      </p>
+    {%- endif -%}
   </header>
 
   <div class="post-content">
@@ -22,7 +32,7 @@ layout: base
   </div>
 
   <nav class="post-nav">
-    <a href="/diary/">← Back to diary</a>
+    <a href="/diary/">&larr; Back to diary</a>
     <a href="/">Home</a>
   </nav>
 </article>
