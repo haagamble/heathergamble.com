@@ -1,7 +1,7 @@
 ---
 title: "Using AI to Turn Duolingo Screenshots into a Lesson"
 date: 2026-02-03
-tags: ["diary", "ai", "grammar"]
+tags: ["diary", "ai", "grammar", "vocabulary"]
 summary: "Using an AI chatbot to turn Duolingo screenshots into a personalized grammar lesson."
 layout: post
 ---
