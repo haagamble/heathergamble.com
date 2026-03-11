@@ -28,6 +28,7 @@ module.exports = function (eleventyConfig) {
   // Copy static folders/files straight through to _site
   eleventyConfig.addPassthroughCopy({ "src/downloads": "downloads" });
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
+  eleventyConfig.addPassthroughCopy({ "src/favicon.svg": "favicon.svg" });
 
   // Enable manual excerpts in front matter parsing
   eleventyConfig.setFrontMatterParsingOptions({
