@@ -428,3 +428,22 @@ body {
   margin: 0 0.4rem;
   color: #999;
 }
+/* Chat styles */
+
+.chat {
+  max-width: 42rem;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  border-radius: 14px;
+  line-height: 1.6;
+}
+
+.chat-user {
+  background: #e8f1ff;
+  margin-left: auto;
+}
+
+.chat-ai {
+  background: #f3f4f6;
+  margin-right: auto;
+}

@@ -56,7 +56,9 @@ So things quickly get complicated.
 
 At this point I asked ChatGPT for help.
 
-> Please give me a lesson on Greek singulars and plurals. I need to know the definite and indefinite articles. I need to know how and when to use a different case.
+<div class="chat chat-user">
+Please give me a lesson on Greek singulars and plurals. I need to know the definite and indefinite articles. I need to know how and when to use a different case.
+</div>
 
 ChatGPT did a really good job laying out the cases in **clear charts**, followed by examples.
 
@@ -82,32 +84,35 @@ So I decided to get help from Claude: I asked **Claude** to make an app for me.
 
 It was a long prompt because I needed to explain exactly what I wanted.
 
-> I'd like you to make me an app please. I'm very confused about accusative, nominative, genitive forms in singular and plural in Greek.
->
-> For example:  
-> The man drinks water.  
-> I see the man.  
-> The house of the man.  
-> The men drink water.  
-> I see the men.
->
-> In each of those cases "the man" is different. The word for "the" is different, and the ending is different.
->
-> Can you make me an app where I have to choose the correct word for "the" and I have to choose the correct word for "man/men".
->
-> For example:  
-> You would ask "The man drinks water."  
-> And you would write:
->
-> **\_** **\_** πίνει νερό
->
-> Then give six choices for the first blank:  
-> (ο, τον, του, οι, τους, των)
->
-> And six choices for the second blank:  
-> (άντρας, άντρα, άντρες, αντρών)
->
-> Each quiz should have 10 questions, and the user should have the option to do the quiz again. There should be lots of questions in the database for the app to choose from.
+<div class="chat chat-user">
+I'd like you to make me an app please. I'm very confused about accusative, nominative, genitive forms in singular and plural in Greek.<br><br>
+
+For example:<br>
+The man drinks water.<br>
+I see the man.<br>
+The house of the man.<br>
+The men drink water.<br>
+I see the men.<br><br>
+
+In each of those cases "the man" is different. The word for "the" is different, and the ending is different.<br><br>
+
+Can you make me an app where I have to choose the correct word for "the" and I have to choose the correct word for "man/men".<br><br>
+
+For example:<br>
+You would ask "The man drinks water."<br>
+And you would write:<br><br>
+
+<strong>\_ \_ πίνει νερό</strong><br><br>
+
+Then give six choices for the first blank:<br>
+(ο, τον, του, οι, τους, των)<br><br>
+
+And six choices for the second blank:<br>
+(άντρας, άντρα, άντρες, αντρών)<br><br>
+
+Each quiz should have 10 questions, and the user should have the option to do the quiz again. There should be lots of questions in the database for the app to choose from.
+
+</div>
 
 Claude worked for a few minutes and then presented me with a **really nice-looking app**.
 
@@ -117,11 +122,14 @@ The only problem was that the choices were always shown in the same order. That 
 
 So I prompted Claude again.
 
-> OK. That was a great start. But it is easy for the user to guess if the answers are always in the same position. Can you mix the answers up?
->
-> And don’t say in the question whether it is nominative, accusative, or genitive.
->
-> But it is nice to see that feedback after the user answers, and in the summary at the end.
+<div class="chat chat-user">
+OK. That was a great start. But it is easy for the user to guess if the answers are always in the same position. Can you mix the answers up?<br><br>
+
+And don’t say in the question whether it is nominative, accusative, or genitive.<br><br>
+
+But it is nice to see that feedback after the user answers, and in the summary at the end.
+
+</div>
 
 The new version was **much better**.
 
@@ -135,30 +143,37 @@ Claude also lets you look at the code behind the app.
 
 I had a quick look and scrolled through the question bank. It didn’t take very long to reach the end, so I asked Claude another question.
 
-> OK. This works really well. How many questions are in the question bank?
+<div class="chat chat-user">
+OK. This works really well. How many questions are in the question bank?
+</div>
 
-Claude replied that there were:
-
-- **7 nouns**
-- **35 questions**
+<div class="chat chat-ai">
+There are <strong>7 nouns</strong> and <strong>35 questions</strong>.
+</div>
 
 So I asked:
 
-> I would love to have more nouns and more questions. How many could you do?
+<div class="chat chat-user">
+I would love to have more nouns and more questions. How many could you do?
+</div>
 
-Claude replied:
-
-> I could comfortably add another 15–20 nouns and bring the bank up to around 150–180 questions.
+<div class="chat chat-ai">
+I could comfortably add another 15–20 nouns and bring the bank up to around 150–180 questions.
+</div>
 
 It also explained which additional nouns it could include.
 
 Then it asked:
 
-> Want me to go ahead and add them?
+<div class="chat chat-ai">
+Want me to go ahead and add them?
+</div>
 
 Of course I said:
 
-> Yes please.
+<div class="chat chat-user">
+Yes please.
+</div>
 
 I can’t help being polite to my chatbots.
 
