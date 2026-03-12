@@ -92,23 +92,16 @@ The man drinks water.<br>
 I see the man.<br>
 The house of the man.<br>
 The men drink water.<br>
-I see the men.<br><br>
+I see the men.<br>
 
-In each of those cases "the man" is different. The word for "the" is different, and the ending is different.<br><br>
+In each of those cases "the man" is different. The word for "the" is different, and the ending is different.<br>
 
-Can you make me an app where I have to choose the correct word for "the" and I have to choose the correct word for "man/men".<br><br>
+Can you make me an app where I have to choose the correct word for "the" and I have to choose the correct word for "man/men".<br>
 
-For example:<br>
-You would ask "The man drinks water."<br>
-And you would write:<br><br>
+For example, you would ask, "The man drinks water."<br>
+And you would write: <strong>\_ \_ πίνει νερό</strong><br>
 
-<strong>\_ \_ πίνει νερό</strong><br><br>
-
-Then give six choices for the first blank:<br>
-(ο, τον, του, οι, τους, των)<br><br>
-
-And six choices for the second blank:<br>
-(άντρας, άντρα, άντρες, αντρών)<br><br>
+Then give six choices for the first blank (ο, τον, του, οι, τους, των) and six choices for the second blank (άντρας, άντρα, άντρες, αντρών)<br>
 
 Each quiz should have 10 questions, and the user should have the option to do the quiz again. There should be lots of questions in the database for the app to choose from.
 
@@ -123,11 +116,7 @@ The only problem was that the choices were always shown in the same order. That 
 So I prompted Claude again.
 
 <div class="chat chat-user">
-OK. That was a great start. But it is easy for the user to guess if the answers are always in the same position. Can you mix the answers up?<br><br>
-
-And don’t say in the question whether it is nominative, accusative, or genitive.<br><br>
-
-But it is nice to see that feedback after the user answers, and in the summary at the end.
+OK. That was a great start. But it is easy for the user to guess if the answers are always in the same position. Can you mix the answers up? And don’t say in the question whether it is nominative, accusative, or genitive. But it is nice to see that feedback after the user answers, and in the summary at the end.
 
 </div>
 
@@ -148,7 +137,7 @@ OK. This works really well. How many questions are in the question bank?
 </div>
 
 <div class="chat chat-ai">
-There are <strong>7 nouns</strong> and <strong>35 questions</strong>.
+Looking at the database in the file there are <strong>35 questions</strong> across 7 nouns.
 </div>
 
 So I asked:
