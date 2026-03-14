@@ -10,8 +10,6 @@ I ran an experiment yesterday to see which AI chatbot would help me most with la
 
 For explaining grammar, generating example sentences, and general language-learning conversations, the strongest tools were **ChatGPT and Copilot**. For creating small custom learning apps, **Claude clearly performed the best**.
 
-I usually use ChatGPT, so I was glad to see that it did well compared to the others. I used to use Copilot more often, and the main reason I use ChatGPT more now is simply that I’m currently paying for **ChatGPT Plus** to help with some other projects. Because of that, ChatGPT is usually already open on my computer.
-
 I suspected that **Claude would still be the best at creating apps**, but it had been a while since I last built one with it, and I hadn’t tested the other tools for that kind of task.
 
 So if you didn’t read my post yesterday, here are my recommendations:
@@ -21,66 +19,19 @@ So if you didn’t read my post yesterday, here are my recommendations:
 
 ---
 
-# What my language learning looked like today
+## What my language learning looked like today
 
-## 1. Duolingo review
+Today I was reviewing Greek nouns and cases in Duolingo. I worked on plurals and the accusative case, but quickly ran into the usual problem: the endings change depending on case (nominative, accusative, genitive) and number.
 
-I started with some Duolingo lessons.
+I copied some example sentences from Duolingo and asked ChatGPT for a quick explanation of how the articles and noun endings change. It produced some helpful charts, which I copied into my notebook.
 
-I’m still **not doing new lessons**. Instead, I’m reviewing older ones because I didn’t really learn the material the first time through.
-
-Today I worked on:
-
-- plurals
-- the accusative case
-
-I still need a lot of help with the endings and with knowing which word to use for **“the”** and **“a”**, because they change depending on gender, number, and case in Greek.
-
----
-
-## 2. Writing example sentences
-
-Next, I wrote down a lot of sentences from the Duolingo lessons.
-
-I tried to make sense of the plural endings, but the plural endings also change depending on the case:
-
-- nominative
-- accusative
-- genitive
-
-So things quickly get complicated.
-
----
-
-## 3. Asking ChatGPT for help
-
-At this point I asked ChatGPT for help.
-
-<div class="chat chat-user">
-Please give me a lesson on Greek singulars and plurals. I need to know the definite and indefinite articles. I need to know how and when to use a different case.
-</div>
-
-ChatGPT did a really good job laying out the cases in **clear charts**, followed by examples.
-
-I asked a few follow-up questions for clarification and asked for additional examples.
-
----
-
-## 4. Writing the charts in my notebook
-
-I then copied the charts into my notebook, hoping that writing them down would help the patterns sink in a bit better.
-
-But I know that what I really need is **practice**.
-
-The charts can serve as a reference, but I need to create lots of sentences and get **immediate feedback and correction**.
-
-At the moment I’m not using a language tutor, so I don’t yet have the option of practicing with a real person. Learning from real people is the best option, but it isn’t available to me right now.
-
----
-
-## 5. Asking Claude to build a practice app
+But charts only go so far. What I really needed was **practice** — lots of sentences and immediate feedback.
 
 So I decided to get help from Claude: I asked **Claude** to make an app for me.
+
+---
+
+## Asking Claude to build a practice app
 
 It was a long prompt because I needed to explain exactly what I wanted.
 
@@ -109,9 +60,7 @@ Each quiz should have 10 questions, and the user should have the option to do th
 
 Claude worked for a few minutes and then presented me with a **really nice-looking app**.
 
-I worked through one quiz and was very happy with how it functioned.
-
-The only problem was that the choices were always shown in the same order. That meant I could guess the answer by position.
+I worked through one quiz and was very happy with how it functioned. The only problem was that the choices were always shown in the same order. That meant I could guess the answer by position.
 
 So I prompted Claude again.
 
@@ -120,17 +69,13 @@ OK. That was a great start. But it is easy for the user to guess if the answers 
 
 </div>
 
-The new version was **much better**.
-
-I really like it.
+The new version was **much better**. I really like it.
 
 ---
 
 ## Expanding the question bank
 
-Claude also lets you look at the code behind the app.
-
-I had a quick look and scrolled through the question bank. It didn’t take very long to reach the end, so I asked Claude another question.
+Claude also lets you look at the code behind the app. I had a quick look and scrolled through the question bank. It didn’t take very long to reach the end, so I asked Claude another question.
 
 <div class="chat chat-user">
 OK. This works really well. How many questions are in the question bank?
@@ -170,13 +115,9 @@ I can’t help being polite to my chatbots.
 
 # The final result
 
-I love the final product.
+I love the final product. It is exactly what I need to help me practice these forms.
 
-It is exactly what I need to help me practice these forms.
-
-You can try the app here:
-
-[Greek article and noun practice app](https://claude.ai/public/artifacts/fff46a1c-19d0-4a2b-8590-8b8056a16da5)
+You can try the app here: [Greek article and noun practice app](https://claude.ai/public/artifacts/fff46a1c-19d0-4a2b-8590-8b8056a16da5)
 
 ---
 
