@@ -6,7 +6,7 @@ summary: "Some Greek words are surprisingly easy to learn because they sound alm
 layout: post
 ---
 
-One encouraging thing about learning Greek is discovering that some words are surprisingly easy to learn because they **sound almost the same in English**. <!-- excerpt --> Many English words come directly from Greek, especially in science, philosophy, and education. Because of that, when you see the Greek version of the word, it already feels familiar.
+One encouraging thing about learning Greek is discovering words that are easy to learn because they **sound almost the same in English**. <!-- excerpt --> Many English words come directly from Greek, especially in science, philosophy, and education. Because of that, when you see the Greek version of the word, it already feels familiar.
 
 ### Everyday Words
 

@@ -6,7 +6,7 @@ summary: "Some Greek words are easier to remember because they sound similar to 
 layout: post
 ---
 
-I love finding words that are easy to learn. Here are some words that **sound similar enough in Greek that English speakers can easily recognize them**.
+I love finding words that are easy to learn. Here are some words that **sound similar enough in Greek that English speakers can easily recognize them**. <!-- excerpt -->
 
 ### Music and the Arts
 
