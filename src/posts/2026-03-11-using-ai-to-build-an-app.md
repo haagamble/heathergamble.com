@@ -8,11 +8,9 @@ layout: post
 
 I ran an experiment yesterday to see which AI chatbot would help me most with language learning. The results were pretty much what I expected.
 
-For explaining grammar, generating example sentences, and general language-learning conversations, the strongest tools were **ChatGPT and Copilot**. For creating small custom learning apps, **Claude clearly performed the best**.
+[You can read that post here.](/diary/testing-ai-tools/)
 
-I suspected that **Claude would still be the best at creating apps**, but it had been a while since I last built one with it, and I hadn’t tested the other tools for that kind of task.
-
-So if you didn’t read my post yesterday, here are my recommendations:
+Here are my recommendations:
 
 - **For grammar explanations, example sentences, and general language questions:** ChatGPT or Copilot
 - **For creating custom learning apps:** Claude
