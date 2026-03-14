@@ -1,5 +1,5 @@
 ---
-title: "Adjective Flashcards and Substitution Drills"
+title: "Flashcards and Substitution Drills"
 date: 2026-03-06
 tags: ["diary", "flashcards", "ai", "speaking", "vocabulary"]
 summary: "Using target-language flashcards to practice adjectives."

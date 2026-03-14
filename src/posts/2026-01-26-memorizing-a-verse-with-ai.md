@@ -1,5 +1,5 @@
 ---
-title: "Using ChatGPT to Memorize a Greek Memory Verse"
+title: "Using ChatGPT to Learn a Verse"
 date: 2026-01-26
 tags: ["diary", "ai", "reading", "grammar"]
 summary: "Using ChatGPT as a study partner while memorizing a short Bible verse in Greek."

@@ -1,5 +1,5 @@
 ---
-title: "Asking an AI Chatbot to Quiz Me — Part 2"
+title: "AI Chatbot Quizzes Me — Part 2"
 date: 2026-02-05
 tags: ["diary", "ai", "vocabulary"]
 summary: "Continuing to use AI-generated quizzes to review vocabulary in different categories."

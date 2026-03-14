@@ -1,5 +1,5 @@
 ---
-title: "Using Google Translate to Listen at Church"
+title: "Using Google Translate at Church"
 date: 2026-03-02
 tags: ["diary", "ai", "listening"]
 summary: "Using Google Translate conversation mode to follow a Greek church service while still hearing the original language."

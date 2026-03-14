@@ -1,5 +1,5 @@
 ---
-title: "Using AI to Build a Greek Grammar Practice App"
+title: "Using AI to Build a Grammar App"
 date: 2026-03-11
 tags: ["diary", "ai", "grammar"]
 summary: "I used Claude to build a custom quiz app to practice Greek cases and article endings."

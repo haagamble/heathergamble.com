@@ -1,5 +1,5 @@
 ---
-title: "Day One in Athens: Starting Greek"
+title: "Day 1 of Learning Greek"
 date: 2026-01-15
 tags: ["diary"]
 summary: "After nearly thirty years in Central Asia, we’ve moved to Athens. I’m beginning Greek and starting a language-learning diary to track the journey."
