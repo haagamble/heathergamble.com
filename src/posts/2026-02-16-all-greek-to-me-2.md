@@ -1,7 +1,7 @@
 ---
 title: "It's All Greek to Me #2"
 date: 2026-02-16
-tags: ["diary", "vocabulary", "greek"]
+tags: ["diary", "greek"]
 summary: "Some Greek words are easier to remember because they sound similar to familiar English words."
 layout: post
 ---
@@ -20,17 +20,18 @@ I love finding words that are easy to learn. Here are some words that **sound si
 
 ### Abstract and Academic Words
 
-| Greek      | English   |
-| ---------- | --------- |
-| θεωρία     | theory    |
-| ανάλυση    | analysis  |
-| διάλογος   | dialogue  |
-| κρίση      | crisis    |
-| χαρακτήρας | character |
-| σύμβολο    | symbol    |
-| τύπος      | type      |
-| τόνος      | tone      |
-| φάση       | phase     |
+| Greek      | English     |
+| ---------- | ----------- |
+| θεωρία     | theory      |
+| ανάλυση    | analysis    |
+| διάλογος   | dialogue    |
+| κρίση      | crisis      |
+| χαρακτήρας | character   |
+| σύμβολο    | symbol      |
+| τύπος      | type        |
+| τόνος      | tone        |
+| φάση       | phase       |
+| θερμόμετρο | thermometer |
 
 These words are not identical to English, but the similarity often makes them easier to remember.
 

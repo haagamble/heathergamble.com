@@ -1,7 +1,7 @@
 ---
-title: "All Greek to Me #1"
+title: "It's All Greek to Me #1"
 date: 2026-02-09
-tags: ["diary", "greek", "vocabulary"]
+tags: ["diary", "greek"]
 summary: "Some Greek words are surprisingly easy to learn because they sound almost identical to English."
 layout: post
 ---
