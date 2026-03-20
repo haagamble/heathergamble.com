@@ -1,7 +1,7 @@
 ---
 title: "Verb Flashcards and 180 Sentences"
 date: 2026-03-03
-tags: ["diary", "flashcards", "speaking", "vocabulary"]
+tags: ["diary", "speaking", "vocab"]
 summary: "Using target-language flashcards to practice verbs and generate sentences without translation."
 layout: post
 ---

@@ -1,7 +1,7 @@
 ---
 title: "AI Chatbot Quizzes Me"
 date: 2026-01-30
-tags: ["diary", "ai", "vocabulary"]
+tags: ["diary", "ai", "vocab"]
 summary: "Using an AI chatbot to create simple vocabulary quizzes during language study."
 layout: post
 ---

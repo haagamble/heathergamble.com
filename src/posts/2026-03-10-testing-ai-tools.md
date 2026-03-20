@@ -1,7 +1,7 @@
 ---
 title: "Comparing AI tools"
 date: 2026-03-10
-tags: ["diary", "ai", "vocabulary"]
+tags: ["diary", "ai", "vocab"]
 summary: "I tested several AI tools—Perplexity, Gemini, Claude, Copilot, and ChatGPT—to see how well they could help me learn a list of Greek verbs using flashcards, quizzes, and study suggestions."
 layout: post
 ---

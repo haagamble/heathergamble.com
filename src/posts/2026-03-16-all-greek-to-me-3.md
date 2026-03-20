@@ -1,7 +1,7 @@
 ---
 title: "It's All Greek to Me #3"
 date: 2026-03-16
-tags: ["diary", "Greek"]
+tags: ["diary", "greek"]
 summary: "Some Greek words are easy to understand because we already know English words built from the same Greek roots."
 layout: post
 ---
