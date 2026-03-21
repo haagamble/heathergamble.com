@@ -16,12 +16,25 @@ const DIARY_TAG_ORDER = [
   "ai",
 ];
 
+const ARTICLE_SECTION_ORDER = [
+  "Start Here",
+  "Practical Techniques",
+  "Learning from Everyday Life",
+  "Ideas / Concepts",
+];
+
 function getVisibleTags(tags = []) {
   return tags.filter((tag) => tag !== "diary");
 }
 
 function formatTag(tag = "") {
   return TAG_LABELS[tag] || tag.replace(/(^|-)([a-z])/g, (_, prefix, letter) => `${prefix}${letter.toUpperCase()}`);
+}
+
+function sortArticlesByTitle(a, b) {
+  const aTitle = a.data.navTitle || a.data.title || a.fileSlug;
+  const bTitle = b.data.navTitle || b.data.title || b.fileSlug;
+  return aTitle.localeCompare(bTitle);
 }
 
 module.exports = function (eleventyConfig) {
@@ -62,6 +75,32 @@ module.exports = function (eleventyConfig) {
     return collectionApi
       .getFilteredByTag("article")
       .sort((a, b) => b.date - a.date);
+  });
+
+  eleventyConfig.addCollection("articleSections", (collectionApi) => {
+    const groupedSections = new Map();
+
+    collectionApi.getFilteredByTag("article").forEach((item) => {
+      const section = item.data.section || "Articles";
+
+      if (!groupedSections.has(section)) {
+        groupedSections.set(section, []);
+      }
+
+      groupedSections.get(section).push(item);
+    });
+
+    const orderedSectionNames = [
+      ...ARTICLE_SECTION_ORDER.filter((section) => groupedSections.has(section)),
+      ...Array.from(groupedSections.keys())
+        .filter((section) => !ARTICLE_SECTION_ORDER.includes(section))
+        .sort((a, b) => a.localeCompare(b)),
+    ];
+
+    return orderedSectionNames.map((title) => ({
+      title,
+      items: groupedSections.get(title).sort(sortArticlesByTitle),
+    }));
   });
 
   eleventyConfig.addCollection("projects", (collectionApi) => {

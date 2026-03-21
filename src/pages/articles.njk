@@ -8,68 +8,17 @@ permalink: /articles/
 <h1>Articles</h1>
 <p class="lede">Practical language-learning activities and frameworks you can use with any language.</p>
 
-{% set sections = [
-  {
-    title: "Start Here",
-    items: [
-      {
-        slug: "eclectic-language-learning",
-        title: "Eclectic Language Learning"
-      }
-    ]
-  },
-  {
-    title: "Practical Techniques",
-    items: [
-      {
-        slug: "using-flashcards",
-        title: "Using Flashcards"
-      },
-      {
-        slug: "using-a-photo-book-for-language-learning",
-        title: "Using a Photo Book for Language Learning"
-      },
-      {
-        slug: "substitution-drills",
-        title: "Substitution Drills"
-      }
-    ]
-  },
-  {
-    title: "Learning from Everyday Life",
-    items: [
-      {
-        slug: "reading-signs",
-        title: "Reading Signs"
-      }
-    ]
-  },
-  {
-    title: "Ideas / Concepts",
-    items: [
-      {
-        slug: "glue",
-        title: "Glue"
-      }
-    ]
-  }
-] %}
-
-{% for section in sections %}
+{% for section in collections.articleSections %}
   <section class="article-section">
     <h2>{{ section.title }}</h2>
     <div class="article-list">
-      {% for entry in section.items %}
-        {% for item in collections.articles %}
-          {% if item.fileSlug == entry.slug %}
-            <article class="article-list-item">
-              <h3 class="article-list-title"><a href="{{ item.url }}">{{ entry.title }}</a></h3>
-              {% if item.data.summary %}
-                <p class="article-list-description">{{ item.data.summary }}</p>
-              {% endif %}
-            </article>
+      {% for item in section.items %}
+        <article class="article-list-item">
+          <h3 class="article-list-title"><a href="{{ item.url }}">{{ item.data.navTitle or item.data.title }}</a></h3>
+          {% if item.data.summary %}
+            <p class="article-list-description">{{ item.data.summary }}</p>
           {% endif %}
-        {% endfor %}
+        </article>
       {% endfor %}
     </div>
   </section>

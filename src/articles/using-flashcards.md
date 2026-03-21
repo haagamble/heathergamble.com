@@ -1,5 +1,6 @@
 ---
 title: "Using Flashcards Without Translation"
+section: "Practical Techniques"
 tags: ["article", "activity"]
 summary: "Flashcards can be a powerful language learning tool when used without translation. Here are several practical ways to use them."
 layout: article

@@ -1,5 +1,6 @@
 ---
 title: "Using Substitution Drills to Practice Sentences"
+section: "Practical Techniques"
 tags: ["article", "activity"]
 summary: "Substitution drills are a simple activity that helps language learners produce many sentences quickly and strengthen grammar patterns."
 layout: article

@@ -1,5 +1,6 @@
 ---
 title: "What Is Eclectic Language Learning?"
+section: "Start Here"
 tags: ["article"]
 summary: "An introduction to the eclectic approach to language learning."
 layout: article

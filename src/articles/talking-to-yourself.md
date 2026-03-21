@@ -1,5 +1,7 @@
 ---
 title: "Talking to Yourself: Building Fluency"
+navTitle: "Talking to Yourself"
+section: "Practical Techniques"
 tags: ["article", "speaking"]
 summary: "A practical and powerful way to improve speaking: using everyday moments to practice language out loud — even when no one else is around."
 layout: article

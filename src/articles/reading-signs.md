@@ -1,5 +1,6 @@
 ---
 title: "Reading Signs: A Simple Way to Build Vocabulary"
+section: "Learning from Everyday Life"
 tags: ["article", "activity"]
 summary: "A practical activity that turns everyday places into opportunities for reading and vocabulary growth."
 layout: article

@@ -1,5 +1,6 @@
 ---
 title: "Using a Photo Book for Language Learning"
+section: "Practical Techniques"
 tags: ["article", "speaking", "listening"]
 summary: "A simple method for creating listening practice and structured language activities using a photo book."
 layout: article

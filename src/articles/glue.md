@@ -1,5 +1,6 @@
 ---
 title: "GLUE: Making Language Stick"
+section: "Ideas / Concepts"
 tags: ["article", "language-learning"]
 summary: "GLUE is a simple framework that keeps language learning connected to real communication: Get what you need, Learn what you get, Use what you learn, Evaluate what you use."
 layout: article
