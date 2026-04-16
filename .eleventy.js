@@ -42,6 +42,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/downloads": "downloads" });
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
   eleventyConfig.addPassthroughCopy({ "src/favicon.svg": "favicon.svg" });
+  eleventyConfig.addPassthroughCopy({
+    "external/greek-verbs/index.html": "greek-verbs/index.html",
+  });
+  eleventyConfig.addPassthroughCopy({
+    "external/greek-verbs/script.js": "greek-verbs/script.js",
+  });
+  eleventyConfig.addPassthroughCopy({
+    "external/greek-verbs/style.css": "greek-verbs/style.css",
+  });
+  eleventyConfig.addPassthroughCopy({
+    "external/greek-verbs/verbs.json": "greek-verbs/verbs.json",
+  });
 
   // Enable manual excerpts in front matter parsing
   eleventyConfig.setFrontMatterParsingOptions({

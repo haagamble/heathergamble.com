@@ -1,0 +1,3 @@
+[submodule "external/greek-verbs"]
+	path = external/greek-verbs
+	url = https://github.com/haagamble/greek-verbs
