@@ -29,17 +29,23 @@ I used Codex in VS Code to help build the app. I started with a project folder t
 ## What I learned
 
 - **Not all Greek verbs behave the same way.**  
-  I had to clearly distinguish between:
+  I had to distinguish between:
   - standard verbs (γράφω, βλέπω)
   - -ομαι verbs (χρειάζομαι, κάθομαι)
-  - special pattern verbs (μου αρέσει, με νοιάζει)  
-    Once I separated these, everything became much clearer.
+  - special pattern verbs (μου αρέσει, με νοιάζει)
+  - multiple forms (πηγαίνω / πάω or αγαπάω / αγαπώ )
 
-- **Real Greek includes variation.**  
-  Verbs like πηγαίνω / πάω or αγαπάω / αγαπώ showed me that learners need exposure to multiple forms, even if the underlying verb is the same.
-  - **I can make an app and learn Greek at the same time.**  
-    I had some reservations about spending time coding instead of doing language study, but my learning actually continued as I collected and sorted sentences, and as I tested the app.
+- **I can make an app and learn Greek at the same time.** 😄
+  I had some reservations about spending time coding instead of doing language study, but my learning actually continued as I collected and sorted sentences and tested the app.
+
+- **I learned how to use a Git submodule.**  
+  This let me keep the app in a separate repository while still publishing it on this site.
 
 This is still very much a work in progress. I’m continuing to add more verbs and sentences and refine the levels.
 
 This app has helped me change how I review and use verbs. Instead of passively recognizing them, I’m starting to actually use them—and that was the goal from the beginning.
+
+## Try the App
+
+<a href="https://heathergamble.com/greek-verbs/" target="_blank" rel="noopener noreferrer">Greek Verbs</a>  
+(opens in a new tab)
