@@ -1,4 +1,5 @@
 node_modules/
 _site/
+_site_verify/
 _site_tmp/
 .DS_Store

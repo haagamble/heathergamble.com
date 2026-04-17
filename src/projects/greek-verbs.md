@@ -35,7 +35,7 @@ I used Codex in VS Code to help build the app. I started with a project folder t
   - special pattern verbs (μου αρέσει, με νοιάζει)
   - multiple forms (πηγαίνω / πάω or αγαπάω / αγαπώ )
 
-- **I can make an app and learn Greek at the same time.** 😄
+- **I can make an app and learn Greek at the same time.**😄  
   I had some reservations about spending time coding instead of doing language study, but my learning actually continued as I collected and sorted sentences and tested the app.
 
 - **I learned how to use a Git submodule.**  
