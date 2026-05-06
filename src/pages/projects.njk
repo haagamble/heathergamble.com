@@ -10,7 +10,7 @@ permalink: /projects/
 
 <div class="project-grid">
   {%- for project in collections.projects -%}
-    <a class="project-card" href="{{ project.url }}">
+    <a class="project-card" href="{{ project.data.app_url or project.url }}">
       <div class="project-card-top">
         <h2>{{ project.data.title }}</h2>
         {%- if project.data.status -%}
@@ -26,7 +26,7 @@ permalink: /projects/
         <p>{{ project.data.summary }}</p>
       {%- endif -%}
 
-      <p class="project-read">View project details -></p>
+      <p class="project-read">{% if project.data.app_url %}Open project ->{% else %}View project details ->{% endif %}</p>
     </a>
   {%- endfor -%}
 </div>

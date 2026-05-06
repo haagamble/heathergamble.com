@@ -54,6 +54,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "external/greek-verbs/verbs.json": "greek-verbs/verbs.json",
   });
+  eleventyConfig.addPassthroughCopy({
+    "external/greek-1500/dist": "projects/greek-1500",
+  });
 
   // Enable manual excerpts in front matter parsing
   eleventyConfig.setFrontMatterParsingOptions({
