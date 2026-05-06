@@ -6,7 +6,7 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "npm run build:greek-1500 && eleventy",
-    "build:greek-1500": "npm --prefix external/greek-1500 ci && npm --prefix external/greek-1500 run build -- --base=/projects/greek-1500/"
+    "build:greek-1500": "npm --prefix external/greek-1500 ci && npm --prefix external/greek-1500 run build -- --base=/greek-1500/"
   },
   "repository": {
     "type": "git",
