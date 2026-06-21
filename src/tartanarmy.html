@@ -1,0 +1,979 @@
+---
+permalink: /tartanarmy/index.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tartan Army HQ — Scotland at the World Cup 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0b1426; --ink-soft:#101e36; --card:#172a47;
+    --card-line:rgba(245,240,230,0.10); --saltire:#2e78c2; --saltire-deep:#1b4e80;
+    --gold:#f4b942; --thistle:#a87cc0; --parchment:#f5f0e6;
+    --parchment-dim:rgba(245,240,230,0.68); --heather:#d9667a;
+    --win:#f4b942; --draw:#a87cc0; --loss:#d9667a;
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ margin:0; background:var(--ink); color:var(--parchment); font-family:'Work Sans',sans-serif; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3{ font-family:'Anton',sans-serif; font-weight:400; letter-spacing:0.02em; margin:0; text-transform:uppercase; }
+  .mono{ font-family:'Space Mono',monospace; }
+
+  .tartan-ribbon{ height:14px; background:repeating-linear-gradient(45deg,var(--saltire) 0 16px,var(--saltire-deep) 16px 32px,var(--gold) 32px 36px,var(--saltire-deep) 36px 52px,var(--thistle) 52px 56px,var(--saltire-deep) 56px 72px); }
+  .wrap{ max-width:1080px; margin:0 auto; padding:0 24px; }
+  section{ padding:72px 0; }
+  section+section{ border-top:1px solid var(--card-line); }
+  .eyebrow{ display:inline-flex; align-items:center; gap:8px; font-family:'Space Mono',monospace; font-size:0.78rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+  .eyebrow::before{ content:''; width:22px; height:2px; background:var(--gold); display:inline-block; }
+
+  /* NAV */
+  header.site-nav{ position:sticky; top:0; z-index:50; background:rgba(11,20,38,0.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--card-line); }
+  .nav-inner{ max-width:1080px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+  .brand{ font-family:'Anton',sans-serif; font-size:1.25rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--parchment); display:flex; align-items:center; gap:10px; white-space:nowrap; }
+  .brand .badge{ width:30px; height:30px; border-radius:6px; background:var(--saltire); display:flex; align-items:center; justify-content:center; font-size:1rem; }
+  nav.links{ display:flex; gap:22px; flex-wrap:wrap; font-size:0.85rem; }
+  nav.links a{ color:var(--parchment-dim); text-decoration:none; font-weight:500; cursor:pointer; transition:color 0.15s; }
+  nav.links a:hover{ color:var(--gold); }
+
+  /* HERO */
+  .hero{ padding:64px 0 80px; background-image:repeating-linear-gradient(0deg,transparent 0 38px,rgba(244,185,66,0.05) 38px 41px,transparent 41px 80px,rgba(168,124,192,0.045) 80px 83px),repeating-linear-gradient(90deg,transparent 0 38px,rgba(244,185,66,0.05) 38px 41px,transparent 41px 80px,rgba(168,124,192,0.045) 80px 83px); }
+  .score-tabs{ display:flex; gap:10px; margin-bottom:16px; flex-wrap:wrap; }
+  .tab-btn{ font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; background:transparent; border:1px solid var(--card-line); color:var(--parchment-dim); padding:6px 14px; border-radius:6px; cursor:pointer; transition:all 0.15s; }
+  .tab-btn.active{ border-color:var(--gold); color:var(--gold); background:rgba(244,185,66,0.08); }
+  .scoreboard{ background:var(--ink-soft); border:1px solid var(--card-line); border-radius:14px; padding:22px 26px; margin-bottom:36px; min-height:90px; }
+  .score-panel{ display:none; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px; }
+  .score-panel.active{ display:flex; }
+  .score-line{ display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .score-team{ font-family:'Anton',sans-serif; font-size:1.4rem; letter-spacing:0.04em; text-transform:uppercase; }
+  .score-team.win{ color:var(--gold); }
+  .score-team.loss-c{ color:var(--heather); }
+  .score-digits{ font-family:'Space Mono',monospace; font-size:2.2rem; font-weight:700; background:var(--card); border:1px solid var(--card-line); border-radius:8px; padding:6px 18px; }
+  .score-meta{ font-family:'Space Mono',monospace; font-size:0.78rem; color:var(--parchment-dim); text-align:right; line-height:1.7; }
+  .ft-tag{ display:inline-block; background:var(--saltire); color:var(--ink); font-weight:700; padding:3px 10px; border-radius:4px; margin-bottom:4px; letter-spacing:0.12em; font-size:0.75rem; }
+  .hero h1{ font-size:clamp(2.6rem,7.5vw,5rem); line-height:1.05; max-width:880px; margin-bottom:22px; }
+  .hero h1 .gold{ color:var(--gold); }
+  .hero h1 .red{ color:var(--heather); }
+  .hero p.lead{ font-size:1.1rem; color:var(--parchment-dim); max-width:620px; margin-bottom:32px; }
+  .btn-row{ display:flex; gap:14px; flex-wrap:wrap; }
+  .btn{ display:inline-flex; align-items:center; gap:8px; padding:13px 24px; border-radius:8px; font-weight:600; font-size:0.95rem; text-decoration:none; border:1px solid transparent; cursor:pointer; transition:transform 0.12s; }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-primary{ background:var(--gold); color:var(--ink); }
+  .btn-ghost{ background:transparent; color:var(--parchment); border-color:var(--card-line); }
+
+  /* STANDINGS */
+  .section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap; margin-bottom:16px; }
+  .section-head h2{ font-size:clamp(1.7rem,4vw,2.5rem); }
+  .section-head .note{ font-family:'Space Mono',monospace; font-size:0.78rem; color:var(--parchment-dim); max-width:320px; text-align:right; }
+  .live-bar{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; font-family:'Space Mono',monospace; font-size:0.75rem; color:var(--parchment-dim); margin-bottom:12px; }
+  .live-dot{ width:8px; height:8px; border-radius:50%; background:var(--heather); flex-shrink:0; }
+  .live-dot.on{ background:var(--gold); animation:pulse 2s infinite; }
+  @keyframes pulse{ 0%{ box-shadow:0 0 0 0 rgba(244,185,66,.45); } 70%{ box-shadow:0 0 0 7px rgba(244,185,66,0); } 100%{ box-shadow:0 0 0 0 rgba(244,185,66,0); } }
+  .refresh-btn{ font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid var(--card-line); color:var(--parchment); padding:4px 12px; border-radius:6px; cursor:pointer; transition:all 0.15s; }
+  .refresh-btn:hover{ border-color:var(--gold); color:var(--gold); }
+  .refresh-btn:disabled{ opacity:.5; cursor:default; }
+  .table-wrap{ overflow-x:auto; border:1px solid var(--card-line); border-radius:12px; }
+  table.standings{ width:100%; border-collapse:collapse; min-width:580px; font-family:'Space Mono',monospace; font-size:0.85rem; }
+  table.standings th,table.standings td{ padding:13px 12px; text-align:center; border-bottom:1px solid var(--card-line); white-space:nowrap; }
+  table.standings th{ font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--parchment-dim); background:var(--ink-soft); }
+  table.standings td.team-cell{ text-align:left; font-family:'Work Sans',sans-serif; font-weight:600; font-size:0.95rem; }
+  table.standings tbody tr:last-child td{ border-bottom:none; }
+  table.standings td.pts{ font-weight:700; font-size:1rem; color:var(--gold); }
+  tr.is-scotland{ background:rgba(46,120,194,0.18); box-shadow:inset 4px 0 0 var(--gold); }
+  .form-pill{ display:inline-flex; width:22px; height:22px; border-radius:5px; align-items:center; justify-content:center; font-size:0.7rem; font-weight:700; color:var(--ink); }
+  .form-pill.W{ background:var(--win); }
+  .form-pill.D{ background:var(--draw); }
+  .form-pill.L{ background:var(--loss); }
+  .standings-note{ margin-top:14px; font-size:0.85rem; color:var(--parchment-dim); }
+
+  /* COUNTDOWN */
+  .countdown-card{ border:1px solid var(--card-line); border-radius:14px; background:var(--ink-soft); padding:36px; display:flex; flex-wrap:wrap; gap:36px; align-items:center; justify-content:space-between; }
+  .countdown-info h3{ font-size:clamp(1.6rem,4.5vw,2.6rem); margin-bottom:10px; }
+  .countdown-info p{ color:var(--parchment-dim); font-size:0.92rem; margin:4px 0; }
+  .countdown-timer{ display:flex; gap:10px; }
+  .timer-block{ background:var(--card); border:1px solid var(--card-line); border-radius:10px; padding:14px 10px; min-width:70px; text-align:center; }
+  .timer-block .num{ font-family:'Space Mono',monospace; font-size:2rem; font-weight:700; color:var(--gold); display:block; }
+  .timer-block .lbl{ font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--parchment-dim); }
+
+  /* FIXTURES */
+  .matchday-label{ font-family:'Space Mono',monospace; font-size:0.75rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--thistle); margin:28px 0 12px; }
+  .matchday-label:first-child{ margin-top:0; }
+  .fixture-row{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 18px; border:1px solid var(--card-line); border-radius:10px; margin-bottom:10px; flex-wrap:wrap; background:var(--ink-soft); }
+  .fixture-row.scotland{ border-color:var(--saltire); box-shadow:inset 4px 0 0 var(--gold); background:rgba(46,120,194,0.10); }
+  .fixture-teams{ font-weight:600; font-size:1rem; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .fixture-score{ font-family:'Space Mono',monospace; font-weight:700; color:var(--gold); }
+  .fixture-score.loss{ color:var(--heather); }
+  .fixture-meta{ font-family:'Space Mono',monospace; font-size:0.78rem; color:var(--parchment-dim); text-align:right; }
+  .tag{ display:inline-block; font-size:0.65rem; letter-spacing:0.12em; padding:2px 8px; border-radius:4px; font-weight:700; vertical-align:middle; }
+  .tag.ft{ background:var(--saltire); color:var(--ink); }
+  .tag.upcoming{ background:var(--thistle); color:var(--ink); }
+  .tag.decider{ background:var(--heather); color:var(--ink); }
+
+  /* SQUAD */
+  .squad-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; }
+  .player-card{ border:1px solid var(--card-line); border-radius:12px; padding:22px; background:var(--ink-soft); display:flex; flex-direction:column; gap:8px; }
+  .player-card .role{ font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); }
+  .player-card h3{ font-size:1.3rem; }
+  .player-card p{ font-size:0.92rem; color:var(--parchment-dim); margin:0; }
+
+  /* ROAD AHEAD */
+  .stepper{ display:flex; flex-wrap:wrap; margin-top:36px; }
+  .step{ flex:1; min-width:120px; text-align:center; position:relative; padding:0 8px 28px; }
+  .step::before{ content:''; display:block; width:18px; height:18px; border-radius:50%; background:var(--card); border:3px solid var(--saltire-deep); margin:0 auto 14px; position:relative; z-index:2; }
+  .step.current::before{ background:var(--gold); border-color:var(--gold); box-shadow:0 0 0 5px rgba(244,185,66,0.18); }
+  .step::after{ content:''; position:absolute; top:8px; left:-50%; width:100%; height:3px; background:var(--card-line); z-index:1; }
+  .step:first-child::after{ display:none; }
+  .step .step-label{ font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--parchment-dim); }
+  .step.current .step-label{ color:var(--gold); font-weight:700; }
+  .step .step-sub{ font-size:0.78rem; color:var(--parchment-dim); margin-top:4px; }
+  .road-note{ margin-top:32px; font-size:0.95rem; color:var(--parchment-dim); max-width:680px; }
+
+  /* TRIVIA */
+  .trivia-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; }
+  .trivia-card{ border:1px solid var(--card-line); border-radius:12px; padding:22px; background:var(--ink-soft); }
+  .trivia-card .num{ font-family:'Anton',sans-serif; font-size:2.2rem; color:var(--thistle); display:block; margin-bottom:6px; }
+  .trivia-card p{ margin:0; font-size:0.92rem; color:var(--parchment-dim); }
+  .trivia-card strong{ color:var(--parchment); }
+
+  footer{ padding:48px 0 64px; text-align:center; }
+  footer h2{ font-size:clamp(1.8rem,5vw,3rem); margin-bottom:14px; }
+  footer p{ color:var(--parchment-dim); font-size:0.9rem; max-width:520px; margin:0 auto 6px; }
+  footer .gold{ color:var(--gold); }
+
+  @media(max-width:640px){
+    section{ padding:48px 0; }
+    .score-panel.active,.countdown-card{ flex-direction:column; align-items:flex-start; }
+    .score-meta,.fixture-meta{ text-align:left; }
+    .section-head .note{ text-align:left; }
+    .countdown-timer{ justify-content:space-between; }
+    .timer-block{ flex:1; min-width:0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="tartan-ribbon"></div>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="badge">🏴</span> Tartan Army HQ</div>
+    <nav class="links">
+      <a data-scroll="standings">Standings</a>
+      <a data-scroll="next-match">The Decider</a>
+      <a data-scroll="fixtures">Fixtures</a>
+      <a data-scroll="squad">Squad</a>
+      <a data-scroll="road-ahead">Road Ahead</a>
+      <a data-scroll="trivia">Trivia</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow" id="hero-eyebrow">FIFA World Cup 2026 · Group C · Matchday 2 Done</div>
+      <div class="score-tabs" id="score-tabs">
+        <button class="tab-btn active" data-tab="md2">Matchday 2</button>
+        <button class="tab-btn" data-tab="md1">Matchday 1</button>
+      </div>
+      <div class="scoreboard" id="scoreboard">
+        <div class="score-panel active" id="panel-md2">
+          <div class="score-line">
+            <span class="score-team loss-c">Scotland</span>
+            <span class="score-digits">0 – 1</span>
+            <span class="score-team win">Morocco</span>
+          </div>
+          <div class="score-meta">
+            <span class="ft-tag">Full Time</span><br>
+            Gillette Stadium, Foxborough · 19 June<br>
+            ⚽ Saibari 2' — fastest goal at WC 2026
+          </div>
+        </div>
+        <div class="score-panel" id="panel-md1">
+          <div class="score-line">
+            <span class="score-team loss-c">Haiti</span>
+            <span class="score-digits">0 – 1</span>
+            <span class="score-team win">Scotland</span>
+          </div>
+          <div class="score-meta">
+            <span class="ft-tag">Full Time</span><br>
+            Gillette Stadium, Foxborough · 14 June<br>
+            ⚽ McGinn 28' — first Scotland WC goal in 28 years
+          </div>
+        </div>
+      </div>
+
+      <h1 id="hero-title">Gut punch in Boston.<br>One game left.<br><span class="gold">Beat Brazil</span> or <span class="red">go home.</span></h1>
+      <p class="lead" id="hero-lead">Saibari struck after just 70 seconds to silence the Tartan Army. Brazil thrashed Haiti 3–0 the same night. Scotland must beat Brazil in Miami on 24 June to reach the knockouts for the first time in their history.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" data-scroll="standings">See the table</a>
+        <a class="btn btn-ghost" id="secondary-cta" data-scroll="next-match">Countdown to Brazil</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STANDINGS -->
+  <section id="standings">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Current Standings</div>
+          <h2>Group C</h2>
+        </div>
+        <div class="note">Top 2 + 8 best third-place teams advance to Round of 32</div>
+      </div>
+      <div class="live-bar">
+        <span class="live-dot" id="live-dot"></span>
+        <span id="live-text">Loading live data…</span>
+        <button class="refresh-btn" id="refresh-btn" disabled>↻ Refresh</button>
+      </div>
+      <div class="table-wrap">
+        <table class="standings">
+          <thead>
+            <tr>
+              <th>Pos</th><th style="text-align:left">Team</th>
+              <th>P</th><th>W</th><th>D</th><th>L</th>
+              <th>GF</th><th>GA</th><th>GD</th><th>Pts</th><th>Form</th>
+            </tr>
+          </thead>
+          <tbody id="standings-body">
+            <tr><td colspan="11" style="color:var(--parchment-dim);padding:24px;text-align:center">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="standings-note" id="standings-note">Brazil lead on goal difference. Scotland must beat Brazil in Miami to stay alive. Haiti are eliminated.</p>
+    </div>
+  </section>
+
+  <!-- NEXT MATCH / COUNTDOWN -->
+  <section id="next-match">
+    <div class="wrap">
+      <div class="eyebrow" id="next-match-eyebrow">The Decider</div>
+      <div class="countdown-card">
+        <div class="countdown-info">
+          <h3 id="next-match-title">Scotland <span style="color:var(--thistle)">vs</span> Brazil</h3>
+          <p id="next-match-date">Wednesday 24 June 2026 · Hard Rock Stadium, Miami</p>
+          <p id="next-match-time">Kick-off: <strong class="mono">6:00pm ET</strong> / <strong class="mono">11:00pm BST</strong></p>
+          <p id="next-match-stakes">Win and Scotland make the knockouts for the <strong>first time ever.</strong></p>
+        </div>
+        <div class="countdown-timer">
+          <div class="timer-block"><span class="num" id="cd-days">--</span><span class="lbl">Days</span></div>
+          <div class="timer-block"><span class="num" id="cd-hours">--</span><span class="lbl">Hrs</span></div>
+          <div class="timer-block"><span class="num" id="cd-mins">--</span><span class="lbl">Min</span></div>
+          <div class="timer-block"><span class="num" id="cd-secs">--</span><span class="lbl">Sec</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIXTURES -->
+  <section id="fixtures">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">The Group</div><h2>Group C Fixtures</h2></div>
+        <div class="note">All times ET / BST</div>
+      </div>
+
+      <div class="matchday-label">Matchday 1 — 13/14 June</div>
+      <div class="fixture-row">
+        <div class="fixture-teams">Brazil <span class="fixture-score">1 – 1</span> Morocco <span class="tag ft">FT</span></div>
+        <div class="fixture-meta">MetLife Stadium, East Rutherford</div>
+      </div>
+      <div class="fixture-row scotland">
+        <div class="fixture-teams">Haiti <span class="fixture-score">0 – 1</span> Scotland <span class="tag ft">FT</span></div>
+        <div class="fixture-meta">Gillette Stadium · McGinn 28'</div>
+      </div>
+
+      <div class="matchday-label">Matchday 2 — 19 June</div>
+      <div class="fixture-row scotland">
+        <div class="fixture-teams">Scotland <span class="fixture-score loss">0 – 1</span> Morocco <span class="tag ft">FT</span></div>
+        <div class="fixture-meta">Gillette Stadium · Saibari 2'</div>
+      </div>
+      <div class="fixture-row">
+        <div class="fixture-teams">Brazil <span class="fixture-score">3 – 0</span> Haiti <span class="tag ft">FT</span></div>
+        <div class="fixture-meta">Lincoln Financial Field · Cunha ×2, Vinícius Jr</div>
+      </div>
+
+      <div class="matchday-label">Matchday 3 — 24 June</div>
+      <div class="fixture-row scotland">
+        <div class="fixture-teams" id="fixture-sco-bra">Scotland <span style="color:var(--parchment-dim);margin:0 4px">vs</span> Brazil <span class="tag decider">The Decider</span></div>
+        <div class="fixture-meta" id="fixture-sco-bra-meta">Hard Rock Stadium, Miami · 6pm ET / 11pm BST</div>
+      </div>
+      <div class="fixture-row">
+        <div class="fixture-teams" id="fixture-mar-hai">Morocco <span style="color:var(--parchment-dim);margin:0 4px">vs</span> Haiti <span class="tag upcoming">Upcoming</span></div>
+        <div class="fixture-meta" id="fixture-mar-hai-meta">6pm ET / 11pm BST</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SQUAD -->
+  <section id="squad">
+    <div class="wrap">
+      <div class="eyebrow">Faces Of The Campaign</div>
+      <h2 style="margin-bottom:28px;font-size:clamp(1.7rem,4vw,2.5rem)">Key Tartan Army Names</h2>
+      <div class="squad-grid">
+        <div class="player-card">
+          <span class="role">Manager</span><h3>Steve Clarke</h3>
+          <p>Ended a 23-year wait for a major tournament. Ended a 28-year wait for a World Cup. Now needs one last miracle against Brazil.</p>
+        </div>
+        <div class="player-card">
+          <span class="role">Captain · Left-back</span><h3>Andy Robertson</h3>
+          <p>Closing in on 100 caps. Champions League winner. Led the Tartan Army out in Foxborough twice — will do so one more time in Miami.</p>
+        </div>
+        <div class="player-card">
+          <span class="role">Midfielder · Matchday 1 hero</span><h3>John McGinn</h3>
+          <p>Scored Scotland's first World Cup goal in 28 years. Needs a big performance in Miami to keep the dream alive.</p>
+        </div>
+        <div class="player-card">
+          <span class="role">Midfielder</span><h3>Scott McTominay</h3>
+          <p>Serie A Player of the Season with Napoli. Suspended for the Brazil game after his booking against Morocco. Scotland will miss him.</p>
+        </div>
+        <div class="player-card">
+          <span class="role">Defender</span><h3>Kieran Tierney</h3>
+          <p>His dangerous cross was Scotland's best moment against Morocco. Will be tasked with keeping Vinícius Júnior quiet in Miami.</p>
+        </div>
+        <div class="player-card">
+          <span class="role">Forward</span><h3>Che Adams</h3>
+          <p>Set up McGinn's opener in the Haiti win. Scotland need him to create and convert chances against Brazil's backline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROAD AHEAD -->
+  <section id="road-ahead">
+    <div class="wrap">
+      <div class="eyebrow">The Bigger Picture</div>
+      <h2 style="font-size:clamp(1.7rem,4vw,2.5rem)">Scotland's Road To History</h2>
+      <p style="color:var(--parchment-dim);max-width:680px;margin-top:14px">The 2026 World Cup has 48 teams across 12 groups. The top two from every group, plus the eight best third-placed teams, make up a 32-team Round of 32. Scotland have never made it past the group stage in their previous eight World Cups.</p>
+      <div class="stepper">
+        <div class="step current" id="step-group"><div class="step-label">Group Stage</div><div class="step-sub" id="step-group-sub">2 of 3 played<br>3rd in Group C</div></div>
+        <div class="step" id="step-r32"><div class="step-label">Round of 32</div><div class="step-sub" id="step-r32-sub">New for 2026</div></div>
+        <div class="step"><div class="step-label">Round of 16</div></div>
+        <div class="step"><div class="step-label">Quarter-Final</div></div>
+        <div class="step"><div class="step-label">Semi-Final</div></div>
+        <div class="step"><div class="step-label">Final</div><div class="step-sub">19 July<br>MetLife Stadium</div></div>
+      </div>
+      <p class="road-note" id="road-note"></p>
+    </div>
+  </section>
+
+  <!-- TRIVIA -->
+  <section id="trivia">
+    <div class="wrap">
+      <div class="eyebrow">For The Pub Quiz</div>
+      <h2 style="margin-bottom:28px;font-size:clamp(1.7rem,4vw,2.5rem)">Tartan Army Trivia</h2>
+      <div class="trivia-grid">
+        <div class="trivia-card"><span class="num">28'</span><p>The minute <strong>John McGinn</strong> scored Scotland's first World Cup goal since Archie Gemmill in 1978 — ending a 28-year wait with a poacher's finish in Foxborough.</p></div>
+        <div class="trivia-card"><span class="num">🦑</span><p>Boston's 7-ton bronze octopus sculpture was <strong>decorated with a traffic cone</strong> by Scotland fans — a nod to the legendary cone atop the Duke of Wellington statue in Glasgow.</p></div>
+        <div class="trivia-card"><span class="num">1st</span><p>Scotland's <strong>first ever World Cup on American soil</strong> — and their first anywhere since France 1998, ending the longest absence of any European nation.</p></div>
+        <div class="trivia-card" id="trivia-knockouts"><span class="num" id="trivia-knockouts-num">0</span><p id="trivia-knockouts-text">Times Scotland have reached the World Cup knockouts — in <strong>nine attempts</strong> spanning 1954 to 2026. That could change in Miami on 24 June.</p></div>
+        <div class="trivia-card"><span class="num">'98</span><p>Scotland were in the <strong>same group as Brazil and Morocco at France 1998</strong> too — and lost to both. Miami on 24 June is a chance to finally end that record.</p></div>
+        <div class="trivia-card" id="trivia-brazil"><span class="num" id="trivia-brazil-num">5×</span><p id="trivia-brazil-text">World Cup wins for Brazil — more than any other nation. Scotland have <strong>never beaten them</strong> in four previous World Cup meetings. Match five is in Miami on 24 June.</p></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="tartan-ribbon"></div>
+
+<footer>
+  <div class="wrap">
+    <h2 id="footer-title">One Game. All or Nothing.</h2>
+    <p id="footer-match">Scotland vs Brazil · Miami · 24 June · 11pm BST</p>
+    <p id="footer-history">Eight World Cups. Zero knockout appearances. One chance to change history.</p>
+    <p class="gold">Come on Scotland. 🏴</p>
+  </div>
+</footer>
+
+<script>
+// ================================================================
+//  TARTAN ARMY HQ — live data via ESPN public API
+//  No API key required. Works on GitHub Pages for any visitor.
+// ================================================================
+
+const GROUP_C_TEAMS = new Set(['SCO','BRA','MAR','HAI']);
+const TEAM_META = {
+  SCO:{ name:'Scotland', flag:'🏴' },
+  BRA:{ name:'Brazil',   flag:'🇧🇷' },
+  MAR:{ name:'Morocco',  flag:'🇲🇦' },
+  HAI:{ name:'Haiti',    flag:'🇭🇹' }
+};
+const CACHE_KEY = 'tartanHQ_groupC_v4';
+const CACHE_TTL = 10 * 60 * 1000; // 10 minutes
+const BRAZIL_KICKOFF = new Date('2026-06-24T22:00:00Z');
+const GROUP_STAGE_OVER = new Date('2026-06-25T02:00:00Z'); // ~4h after kickoff
+let CURRENT_MATCHES = {};
+
+// Hardcoded fallback (Matchday 2 complete)
+const FALLBACK = [
+  { code:'BRA', P:2, W:1, D:1, L:0, GF:4, GA:1, form:['D','W'] },
+  { code:'MAR', P:2, W:1, D:1, L:0, GF:2, GA:1, form:['D','W'] },
+  { code:'SCO', P:2, W:1, D:0, L:1, GF:1, GA:1, form:['W','L'] },
+  { code:'HAI', P:2, W:0, D:0, L:2, GF:0, GA:4, form:['L','L'] }
+];
+
+function setHTML(id, html) {
+  const el = document.getElementById(id);
+  if (el) el.innerHTML = html;
+}
+
+function setText(id, text) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = text;
+}
+
+function matchKey(a, b) {
+  return [a, b].sort().join('-');
+}
+
+function findMatch(a, b) {
+  return CURRENT_MATCHES[matchKey(a, b)];
+}
+
+function teamName(code) {
+  return TEAM_META[code] ? TEAM_META[code].name : code;
+}
+
+function scoreFor(match, code) {
+  return match && Object.prototype.hasOwnProperty.call(match.scores, code)
+    ? match.scores[code]
+    : null;
+}
+
+function scoreline(match, first, second) {
+  const a = scoreFor(match, first);
+  const b = scoreFor(match, second);
+  return a === null || b === null ? '' : `${a} – ${b}`;
+}
+
+function getGroupState(rows) {
+  const sorted = rows
+    .map(t => ({ ...t, GD: t.GF - t.GA, Pts: t.W * 3 + t.D }))
+    .sort((a, b) => b.Pts - a.Pts || b.GD - a.GD || b.GF - a.GF);
+  const sco = sorted.find(t => t.code === 'SCO');
+  const pos = sorted.findIndex(t => t.code === 'SCO') + 1;
+  const now = new Date();
+  const allPlayed = !!sco && sco.P >= 3;
+  const lastResult = sco && sco.form[sco.form.length - 1];
+  const phase = allPlayed ? 'post' : (now >= GROUP_STAGE_OVER ? 'awaiting' : (now >= BRAZIL_KICKOFF ? 'live' : 'pre'));
+  return { sorted, sco, pos, allPlayed, lastResult, phase, pts: sco ? sco.Pts : 0 };
+}
+
+function ordinal(n) {
+  if (!n) return '3rd';
+  if (n === 1) return '1st';
+  if (n === 2) return '2nd';
+  if (n === 3) return '3rd';
+  return `${n}th`;
+}
+
+function describeScotlandResult(state, match) {
+  const score = match && match.completed ? ` ${scoreline(match, 'SCO', 'BRA')}.` : '';
+  if (state.lastResult === 'W') {
+    return {
+      label: 'qualified',
+      headline: `Scotland did it.<br><span class="gold">Knockouts</span> at last.`,
+      lead: `Scotland beat Brazil${score} For the first time in World Cup history, the Tartan Army are heading beyond the group stage.`,
+      standings: 'Scotland are through to the Round of 32. History made.',
+      stakes: 'Scotland are through to the <strong>Round of 32</strong> for the first time ever.',
+      footerTitle: 'History Made.',
+      footerHistory: 'Nine World Cups. One long wait. Scotland are finally in the knockouts.'
+    };
+  }
+  if (state.lastResult === 'D') {
+    return {
+      label: 'waiting',
+      headline: `Still alive?<br><span class="gold">Four points</span> and waiting.`,
+      lead: `Scotland drew with Brazil${score} The group is finished, but the third-place table will decide whether the dream stretches into the knockouts.`,
+      standings: `Scotland finished Group C with ${state.pts} points and now wait on the wider third-place picture.`,
+      stakes: 'Scotland have finished the group and are waiting on the third-place standings.',
+      footerTitle: 'Now We Wait.',
+      footerHistory: 'Scotland took the fight to Group C. The wider table decides what comes next.'
+    };
+  }
+  return {
+    label: 'waiting',
+    headline: `Pride, pain,<br><span class="red">and a wait</span> for help.`,
+    lead: `Scotland lost to Brazil${score} Their Group C games are complete, and any route onward now depends on the wider third-place picture.`,
+    standings: `Scotland finished Group C with ${state.pts} points. Any route onward depends on results across the other groups.`,
+    stakes: 'Scotland have finished the group and need help from the third-place table.',
+    footerTitle: 'Group Stage Complete.',
+    footerHistory: 'The campaign is no longer in Scotland’s hands, but the Tartan Army story is not fully settled yet.'
+  };
+}
+
+function renderMatchday3ScoreTab(match) {
+  if (!match || !match.completed || document.getElementById('panel-md3')) return;
+
+  const tabs = document.getElementById('score-tabs');
+  const board = document.getElementById('scoreboard');
+  if (!tabs || !board) return;
+
+  const scoScore = scoreFor(match, 'SCO');
+  const braScore = scoreFor(match, 'BRA');
+  const scoClass = scoScore > braScore ? 'win' : scoScore < braScore ? 'loss-c' : '';
+  const braClass = braScore > scoScore ? 'win' : braScore < scoScore ? 'loss-c' : '';
+
+  const btn = document.createElement('button');
+  btn.className = 'tab-btn active';
+  btn.dataset.tab = 'md3';
+  btn.textContent = 'Matchday 3';
+  tabs.prepend(btn);
+  bindScoreTab(btn);
+
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+  document.querySelectorAll('.score-panel').forEach(p => p.classList.remove('active'));
+
+  const panel = document.createElement('div');
+  panel.className = 'score-panel active';
+  panel.id = 'panel-md3';
+  panel.innerHTML = `
+    <div class="score-line">
+      <span class="score-team ${scoClass}">Scotland</span>
+      <span class="score-digits">${scoScore} – ${braScore}</span>
+      <span class="score-team ${braClass}">Brazil</span>
+    </div>
+    <div class="score-meta">
+      <span class="ft-tag">Full Time</span><br>
+      Hard Rock Stadium, Miami · 24 June<br>
+      Group C finale
+    </div>`;
+  board.prepend(panel);
+}
+
+function renderFixture(id, metaId, match, first, second, upcomingTag) {
+  const scoreClass = first === 'SCO' && match && scoreFor(match, first) < scoreFor(match, second) ? ' loss' : '';
+  if (match && match.completed) {
+    setHTML(id, `${teamName(first)} <span class="fixture-score${scoreClass}">${scoreline(match, first, second)}</span> ${teamName(second)} <span class="tag ft">FT</span>`);
+    setText(metaId, first === 'SCO' ? 'Hard Rock Stadium, Miami · Full time' : 'Full time');
+  } else {
+    setHTML(id, `${teamName(first)} <span style="color:var(--parchment-dim);margin:0 4px">vs</span> ${teamName(second)} <span class="tag ${upcomingTag === 'The Decider' ? 'decider' : 'upcoming'}">${upcomingTag}</span>`);
+  }
+}
+
+function renderPageState(rows) {
+  const state = getGroupState(rows);
+  const scotlandBrazil = findMatch('SCO', 'BRA');
+  const moroccoHaiti = findMatch('MAR', 'HAI');
+  const timer = document.querySelector('.countdown-timer');
+  if (timer) timer.style.display = state.phase === 'pre' ? 'flex' : 'none';
+
+  renderMatchday3ScoreTab(scotlandBrazil);
+  renderFixture('fixture-sco-bra', 'fixture-sco-bra-meta', scotlandBrazil, 'SCO', 'BRA', state.phase === 'live' ? 'Live' : state.phase === 'awaiting' ? 'Awaiting result' : 'The Decider');
+  renderFixture('fixture-mar-hai', 'fixture-mar-hai-meta', moroccoHaiti, 'MAR', 'HAI', state.phase === 'live' ? 'Live' : state.phase === 'awaiting' ? 'Awaiting result' : 'Upcoming');
+
+  setHTML('step-group-sub', `${state.sco ? state.sco.P : 2} of 3 played<br>${ordinal(state.pos)} in Group C`);
+  document.getElementById('step-group')?.classList.toggle('current', state.phase !== 'post' || state.lastResult !== 'W');
+  document.getElementById('step-r32')?.classList.toggle('current', state.phase === 'post' && state.lastResult === 'W');
+  setText('step-r32-sub', state.phase === 'post' && state.lastResult === 'W' ? 'Scotland qualified' : 'New for 2026');
+
+  if (state.phase === 'pre') {
+    setText('hero-eyebrow', 'FIFA World Cup 2026 · Group C · Matchday 2 Done');
+    setHTML('hero-title', 'Gut punch in Boston.<br>One game left.<br><span class="gold">Beat Brazil</span> or <span class="red">go home.</span>');
+    setText('hero-lead', 'Saibari struck after just 70 seconds to silence the Tartan Army. Brazil thrashed Haiti 3–0 the same night. Scotland must beat Brazil in Miami on 24 June to reach the knockouts for the first time in their history.');
+    setText('standings-note', 'Brazil lead on goal difference. Scotland must beat Brazil in Miami to stay alive. Haiti are eliminated.');
+    setText('next-match-eyebrow', 'The Decider');
+    setHTML('next-match-title', 'Scotland <span style="color:var(--thistle)">vs</span> Brazil');
+    setText('next-match-date', 'Wednesday 24 June 2026 · Hard Rock Stadium, Miami');
+    setHTML('next-match-time', 'Kick-off: <strong class="mono">6:00pm ET</strong> / <strong class="mono">11:00pm BST</strong>');
+    setHTML('next-match-stakes', 'Win and Scotland make the knockouts for the <strong>first time ever.</strong>');
+    setText('secondary-cta', 'Countdown to Brazil');
+    setText('footer-title', 'One Game. All or Nothing.');
+    setText('footer-match', 'Scotland vs Brazil · Miami · 24 June · 11pm BST');
+    setText('footer-history', 'Eight World Cups. Zero knockout appearances. One chance to change history.');
+    return;
+  }
+
+  if (state.phase === 'live') {
+    setText('hero-eyebrow', 'FIFA World Cup 2026 · Group C · Matchday 3 Live');
+    setHTML('hero-title', 'This is it in Miami.<br><span class="gold">History</span> is on the line.');
+    setText('hero-lead', 'Scotland are playing Brazil with a place in the knockouts at stake. The table will update when ESPN marks the match full time.');
+    setText('standings-note', 'Scotland-Brazil is underway. The table will include the result once the match is marked complete.');
+    setText('next-match-eyebrow', 'Live Now');
+    setHTML('next-match-title', 'Scotland <span style="color:var(--thistle)">vs</span> Brazil');
+    setText('next-match-date', 'Hard Rock Stadium, Miami');
+    setHTML('next-match-time', '<strong class="mono">In progress</strong>');
+    setText('next-match-stakes', 'The result decides whether Scotland reach the knockouts automatically or need help.');
+    setText('secondary-cta', 'Follow the decider');
+    setText('footer-title', 'Ninety Minutes For History.');
+    setText('footer-match', 'Scotland vs Brazil · Miami');
+    setText('footer-history', 'The group-stage story is being written right now.');
+    return;
+  }
+
+  if (state.phase === 'awaiting') {
+    setText('hero-eyebrow', 'FIFA World Cup 2026 · Group C · Awaiting Final Data');
+    setHTML('hero-title', 'Full time is close.<br><span class="gold">The table</span> is catching up.');
+    setText('hero-lead', 'The scheduled match window has passed. As soon as ESPN marks Scotland-Brazil complete, this page will switch to the final Group C story.');
+    setText('standings-note', 'Waiting for final Group C results from ESPN. Showing the latest available table for now.');
+    setText('next-match-eyebrow', 'Awaiting Result');
+    setHTML('next-match-title', 'Scotland <span style="color:var(--thistle)">vs</span> Brazil');
+    setText('next-match-date', 'Hard Rock Stadium, Miami');
+    setHTML('next-match-time', '<strong class="mono">Final data pending</strong>');
+    setText('next-match-stakes', 'The page will update automatically once the final score appears in the live feed.');
+    setText('secondary-cta', 'Refresh the table');
+    setText('footer-title', 'Waiting On The Whistle.');
+    setText('footer-match', 'Scotland vs Brazil · Miami');
+    setText('footer-history', 'The page is waiting for the final Group C data before calling what comes next.');
+    return;
+  }
+
+  const result = describeScotlandResult(state, scotlandBrazil);
+  setText('hero-eyebrow', 'FIFA World Cup 2026 · Group C · Group Stage Complete');
+  setHTML('hero-title', result.headline);
+  setText('hero-lead', result.lead);
+  setText('standings-note', result.standings);
+  setText('next-match-eyebrow', result.label === 'qualified' ? 'Next Stop' : 'Group C Complete');
+  setHTML('next-match-title', result.label === 'qualified' ? 'Round of 32' : 'Waiting Game');
+  setText('next-match-date', result.label === 'qualified' ? 'Opponent and venue to be confirmed' : 'Third-place ranking still developing');
+  setHTML('next-match-time', result.label === 'qualified' ? '<strong class="mono">Fixture TBC</strong>' : '<strong class="mono">Awaiting other groups</strong>');
+  setHTML('next-match-stakes', result.stakes);
+  setText('secondary-cta', result.label === 'qualified' ? 'What comes next' : 'See the table');
+  setText('footer-title', result.footerTitle);
+  setText('footer-match', scotlandBrazil && scotlandBrazil.completed ? `Scotland ${scoreline(scotlandBrazil, 'SCO', 'BRA')} Brazil · Miami` : 'Scotland vs Brazil · Miami');
+  setText('footer-history', result.footerHistory);
+}
+
+// ----------------------------------------------------------------
+//  DYNAMIC TRIVIA CARDS
+// ----------------------------------------------------------------
+function renderTriviaCards(rows) {
+  const sco = rows.find(t => t.code === 'SCO');
+  const now = new Date();
+  const allPlayed = sco && sco.P === 3;
+  const lastResult = sco && sco.form[sco.form.length - 1];
+  const afterBrazil = now > GROUP_STAGE_OVER;
+
+  // "0 knockouts" card
+  const kNum = document.getElementById('trivia-knockouts-num');
+  const kTxt = document.getElementById('trivia-knockouts-text');
+  if (kNum && kTxt) {
+    if (!afterBrazil || !allPlayed) {
+      kNum.textContent = '0';
+      kTxt.innerHTML = 'Times Scotland have reached the World Cup knockouts — in <strong>nine attempts</strong> spanning 1954 to 2026. That could change in Miami on 24 June.';
+    } else if (lastResult === 'W') {
+      kNum.textContent = '1';
+      kTxt.innerHTML = '<strong>Time</strong> Scotland have reached the World Cup knockouts. It took nine attempts and 72 years, but the Tartan Army are through. History made. 🏴';
+    } else {
+      kNum.textContent = '0';
+      kTxt.innerHTML = 'Still zero World Cup knockout appearances after nine tournaments. But Scotland won their opening game for the first time ever at a World Cup. The journey continues. 🏴';
+    }
+  }
+
+  // "5× Brazil" card
+  const bNum = document.getElementById('trivia-brazil-num');
+  const bTxt = document.getElementById('trivia-brazil-text');
+  if (bNum && bTxt) {
+    if (!afterBrazil || !allPlayed) {
+      bNum.textContent = '5×';
+      bTxt.innerHTML = 'World Cup wins for Brazil — more than any other nation. Scotland have <strong>never beaten them</strong> in four previous World Cup meetings. Match five is in Miami on 24 June.';
+    } else if (lastResult === 'W') {
+      bNum.textContent = '5×';
+      bTxt.innerHTML = 'World Cup wins for Brazil — but not tonight. Scotland just <strong>beat the five-time champions</strong> for the first time ever. That result will be talked about for generations. 🏴';
+    } else if (lastResult === 'D') {
+      bNum.textContent = '5×';
+      bTxt.innerHTML = 'World Cup wins for Brazil. Scotland held the five-time champions to a <strong>draw in Miami</strong> — not enough to be sure of progressing, but nobody gave them a chance of that either.';
+    } else {
+      bNum.textContent = '5×';
+      bTxt.innerHTML = 'World Cup wins for Brazil, and Scotland couldn\'t make it a famous upset on the night. But they <strong>pushed the five-time champions</strong> all the way in Miami. Held your heads high, lads. 🏴';
+    }
+  }
+}
+
+function renderRoadNote(rows) {
+  const el = document.getElementById('road-note');
+  if (!el) return;
+  const sco = rows.find(t => t.code === 'SCO');
+  const now = new Date();
+
+  if (now < BRAZIL_KICKOFF) {
+    // Before the Brazil game
+    el.innerHTML = 'Win against Brazil and Scotland make the knockouts for the first time in nine World Cup campaigns. The nation has been waiting since 1958 to see a Scottish side progress from a World Cup. 24 June, Miami. No pressure.';
+  } else if (!sco || sco.P < 3) {
+    // During the Brazil game (result not yet in)
+    el.innerHTML = new Date() < GROUP_STAGE_OVER
+      ? 'The group stage is underway. Scotland are playing Brazil in Miami right now. 🏴'
+      : 'The scheduled match window has passed. The page is waiting for ESPN to confirm the final Group C result.';
+  } else {
+    // All three matches played — check Scotland's final form
+    const lastResult = sco.form[sco.form.length - 1];
+    const pts = sco.W * 3 + sco.D;
+    if (lastResult === 'W') {
+      // Won vs Brazil
+      el.innerHTML = '🏴 <strong style="color:var(--gold)">Scotland won.</strong> For the first time in nine World Cup campaigns — in 1954, 1958, 1974, 1978, 1982, 1986, 1990, 1998, and now 2026 — the Tartan Army are in the knockout rounds. History made.';
+    } else if (pts >= 4) {
+      // Drew vs Brazil but may still have enough points as best third
+      el.innerHTML = 'Scotland drew with Brazil and finished third in Group C on ' + pts + ' points. Whether they advance depends on results across the other groups — fingers crossed for a spot as one of the eight best third-placed teams. 🏴';
+    } else {
+      // Eliminated
+      el.innerHTML = 'Scotland\'s 2026 World Cup campaign ends in the group stage — the ninth time in nine attempts. But they won their opening match for the first time ever at a World Cup, and gave Morocco and Brazil a game. The Tartan Army will be back. 🏴';
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+//  RENDER STANDINGS
+// ----------------------------------------------------------------
+function renderStandings(rows) {
+  const sorted = rows
+    .map(t => ({ ...t, GD: t.GF - t.GA, Pts: t.W * 3 + t.D }))
+    .sort((a, b) => b.Pts - a.Pts || b.GD - a.GD || b.GF - a.GF);
+
+  document.getElementById('standings-body').innerHTML = sorted.map((t, i) => {
+    const m = TEAM_META[t.code] || { name: t.code, flag: '' };
+    const gd = t.GD > 0 ? '+' + t.GD : '' + t.GD;
+    const form = (t.form || []).map(f => `<span class="form-pill ${f}">${f}</span>`).join(' ');
+    const cls = t.code === 'SCO' ? ' class="is-scotland"' : '';
+    return `<tr${cls}>
+      <td>${i + 1}</td>
+      <td class="team-cell">${m.flag} ${m.name}</td>
+      <td>${t.P}</td><td>${t.W}</td><td>${t.D}</td><td>${t.L}</td>
+      <td>${t.GF}</td><td>${t.GA}</td><td>${gd}</td>
+      <td class="pts">${t.Pts}</td><td>${form}</td>
+    </tr>`;
+  }).join('');
+  renderPageState(sorted);
+  renderRoadNote(rows);
+  renderTriviaCards(rows);
+}
+
+// ----------------------------------------------------------------
+//  STATUS BAR
+// ----------------------------------------------------------------
+function setStatus(text, live) {
+  const dot = document.getElementById('live-dot');
+  const span = document.getElementById('live-text');
+  if (dot) dot.classList.toggle('on', !!live);
+  if (span) span.textContent = text;
+}
+function setBusy(busy) {
+  const btn = document.getElementById('refresh-btn');
+  if (btn) { btn.disabled = busy; btn.textContent = busy ? '↻ Fetching…' : '↻ Refresh'; }
+}
+
+// ----------------------------------------------------------------
+//  COMPUTE STANDINGS FROM ESPN EVENTS
+// ----------------------------------------------------------------
+function computeStandings(events) {
+  const table = {};
+  Object.keys(TEAM_META).forEach(code => {
+    table[code] = { code, P:0, W:0, D:0, L:0, GF:0, GA:0, form:[] };
+  });
+
+  // Sort events by date so form is chronological
+  const sorted = [...events].sort((a, b) => new Date(a.date) - new Date(b.date));
+
+  for (const ev of sorted) {
+    const comp = ev.competitions && ev.competitions[0];
+    if (!comp) continue;
+    const competitors = comp.competitors || [];
+    if (competitors.length !== 2) continue;
+
+    const [c1, c2] = competitors;
+    const a1 = c1.team && c1.team.abbreviation;
+    const a2 = c2.team && c2.team.abbreviation;
+
+    // Only process Group C matches
+    if (!GROUP_C_TEAMS.has(a1) || !GROUP_C_TEAMS.has(a2)) continue;
+
+    // Only count completed matches
+    const status = ev.status && ev.status.type;
+    if (!status || !status.completed) continue;
+
+    const s1 = parseInt(c1.score, 10);
+    const s2 = parseInt(c2.score, 10);
+    if (isNaN(s1) || isNaN(s2)) continue;
+
+    // Ensure both teams exist in table
+    if (!table[a1]) table[a1] = { code:a1, P:0, W:0, D:0, L:0, GF:0, GA:0, form:[] };
+    if (!table[a2]) table[a2] = { code:a2, P:0, W:0, D:0, L:0, GF:0, GA:0, form:[] };
+
+    table[a1].P++; table[a2].P++;
+    table[a1].GF += s1; table[a1].GA += s2;
+    table[a2].GF += s2; table[a2].GA += s1;
+
+    if (s1 > s2) {
+      table[a1].W++; table[a1].form.push('W');
+      table[a2].L++; table[a2].form.push('L');
+    } else if (s2 > s1) {
+      table[a2].W++; table[a2].form.push('W');
+      table[a1].L++; table[a1].form.push('L');
+    } else {
+      table[a1].D++; table[a1].form.push('D');
+      table[a2].D++; table[a2].form.push('D');
+    }
+  }
+
+  return Object.values(table);
+}
+
+function computeMatchDetails(events) {
+  const matches = {};
+
+  for (const ev of events) {
+    const comp = ev.competitions && ev.competitions[0];
+    if (!comp) continue;
+    const competitors = comp.competitors || [];
+    if (competitors.length !== 2) continue;
+
+    const [c1, c2] = competitors;
+    const a1 = c1.team && c1.team.abbreviation;
+    const a2 = c2.team && c2.team.abbreviation;
+    if (!GROUP_C_TEAMS.has(a1) || !GROUP_C_TEAMS.has(a2)) continue;
+
+    const status = ev.status && ev.status.type;
+    matches[matchKey(a1, a2)] = {
+      date: ev.date,
+      completed: !!(status && status.completed),
+      state: status && status.state,
+      detail: status && status.detail,
+      scores: {
+        [a1]: parseInt(c1.score, 10),
+        [a2]: parseInt(c2.score, 10)
+      }
+    };
+  }
+
+  return matches;
+}
+
+// ----------------------------------------------------------------
+//  FETCH FROM ESPN
+// ----------------------------------------------------------------
+async function fetchLive() {
+  setBusy(true);
+  setStatus('Fetching from ESPN…', false);
+
+  // Fetch all Group C match dates in one call
+  const url = 'https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard' +
+              '?limit=100&dates=20260613-20260625';
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`ESPN ${res.status}`);
+    const json = await res.json();
+    const events = json.events || [];
+
+    // Filter to only Group C matches
+    const groupCEvents = events.filter(ev => {
+      const comp = ev.competitions && ev.competitions[0];
+      if (!comp) return false;
+      const abbrs = (comp.competitors || []).map(c => c.team && c.team.abbreviation);
+      return abbrs.every(a => GROUP_C_TEAMS.has(a));
+    });
+
+    if (groupCEvents.length === 0) throw new Error('No Group C events found');
+
+    CURRENT_MATCHES = computeMatchDetails(groupCEvents);
+    const standings = computeStandings(groupCEvents);
+
+    // Cache it
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), standings, matches: CURRENT_MATCHES }));
+    } catch (_) {}
+
+    renderStandings(standings);
+    const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    setStatus(`Live · Updated ${time}`, true);
+  } catch (err) {
+    console.warn('ESPN fetch failed:', err);
+    // Try cache before falling back to hardcoded
+    const cached = loadCache();
+    if (cached) {
+      CURRENT_MATCHES = cached.matches || {};
+      renderStandings(cached.standings);
+      const mins = Math.round((Date.now() - cached.ts) / 60000);
+      setStatus(`ESPN unavailable — showing data from ${mins} min ago`, false);
+    } else {
+      renderStandings(FALLBACK);
+      setStatus('ESPN unavailable — showing Matchday 2 snapshot', false);
+    }
+  } finally {
+    setBusy(false);
+  }
+}
+
+function loadCache() {
+  try {
+    const raw = localStorage.getItem(CACHE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (!parsed || !Array.isArray(parsed.standings)) return null;
+    return parsed;
+  } catch (_) { return null; }
+}
+
+// ----------------------------------------------------------------
+//  INIT — cache first, then live if stale
+// ----------------------------------------------------------------
+async function init() {
+  CURRENT_MATCHES = {};
+  renderStandings(FALLBACK); // instant paint
+
+  const cached = loadCache();
+  if (cached && (Date.now() - cached.ts) < CACHE_TTL) {
+    CURRENT_MATCHES = cached.matches || {};
+    renderStandings(cached.standings);
+    const mins = Math.round((Date.now() - cached.ts) / 60000);
+    setStatus(`Live · Cached ${mins} min ago`, true);
+    setBusy(false);
+  } else {
+    await fetchLive();
+  }
+}
+
+document.getElementById('refresh-btn').addEventListener('click', fetchLive);
+init();
+
+// ----------------------------------------------------------------
+//  COUNTDOWN — Scotland vs Brazil, 24 June 2026 22:00 UTC
+// ----------------------------------------------------------------
+const kickoff = BRAZIL_KICKOFF.getTime();
+function tick() {
+  const diff = kickoff - Date.now();
+  const pad = n => String(n).padStart(2, '0');
+  const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+  if (diff <= 0) { ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id => set(id, '0')); return; }
+  set('cd-days',  Math.floor(diff / 86400000));
+  set('cd-hours', pad(Math.floor(diff / 3600000 % 24)));
+  set('cd-mins',  pad(Math.floor(diff / 60000 % 60)));
+  set('cd-secs',  pad(Math.floor(diff / 1000 % 60)));
+}
+tick();
+setInterval(tick, 1000);
+
+// ----------------------------------------------------------------
+//  SMOOTH SCROLL via data-scroll (no href anchors)
+// ----------------------------------------------------------------
+document.querySelectorAll('[data-scroll]').forEach(el => {
+  el.style.cursor = 'pointer';
+  el.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.getElementById(el.getAttribute('data-scroll'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// ----------------------------------------------------------------
+//  SCORE TABS
+// ----------------------------------------------------------------
+function bindScoreTab(btn) {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.score-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    const panel = document.getElementById('panel-' + btn.getAttribute('data-tab'));
+    if (panel) panel.classList.add('active');
+  });
+}
+document.querySelectorAll('.tab-btn').forEach(bindScoreTab);
+</script>
+</body>
+</html>
