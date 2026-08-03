@@ -283,38 +283,25 @@ permalink: /sweet-journey/index.html
         font-style: italic;
       }
 
-      .destination {
-        position: relative;
-        margin-top: 2rem;
-        padding: clamp(1.6rem, 5vw, 2.5rem);
-        text-align: center;
-        background: #2d2723;
-        color: #fffaf0;
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
+      .stop-photos {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        margin: 1rem 0 0.35rem;
       }
 
-      .destination .code {
-        display: inline-block;
-        margin-bottom: 0.5rem;
-        color: #f4c879;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: clamp(2.6rem, 12vw, 5.3rem);
-        font-weight: 800;
-        letter-spacing: 0.16em;
-        line-height: 1;
-      }
-
-      .destination h2 {
+      .stop-photo {
         margin: 0;
-        font-size: clamp(1.75rem, 6vw, 2.6rem);
       }
 
-      .destination p {
-        max-width: 35rem;
-        margin: 0.8rem auto 0;
-        color: #f2e7d6;
-        font-size: 1.05rem;
+      .stop-photo img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border: 1px solid rgba(183, 138, 67, 0.35);
+        border-radius: 14px;
+        box-shadow: 0 8px 18px rgba(67, 47, 28, 0.12);
       }
 
       .closing {
@@ -384,6 +371,10 @@ permalink: /sweet-journey/index.html
         .stop:nth-child(even) .stop-meta {
           flex-direction: row-reverse;
         }
+
+        .stop-photos {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
       }
 
       @media (prefers-reduced-motion: no-preference) {
@@ -415,7 +406,7 @@ permalink: /sweet-journey/index.html
 
         <h1>
           Seven Countries.
-          <span>One Story.</span>
+          <span>One Sweet Story.</span>
         </h1>
 
         <div class="hero-divider" aria-hidden="true">♡</div>
@@ -448,6 +439,24 @@ permalink: /sweet-journey/index.html
               young child.
             </p>
 
+            <div class="stop-photos" aria-label="Photos of Anna in Turkey">
+              <figure class="stop-photo">
+                <img
+                  src="images/Anna%20baby.jpeg"
+                  alt="Anna as a baby in Turkey"
+                  loading="lazy"
+                />
+              </figure>
+
+              <figure class="stop-photo">
+                <img
+                  src="images/Anna%20Istanbul.jpeg"
+                  alt="Anna in Istanbul"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
             <p class="candy-note">Represented by Busem Milk Caramel.</p>
           </div>
         </article>
@@ -463,6 +472,17 @@ permalink: /sweet-journey/index.html
               Jamie was born in Buxton, England, and was there for a few weeks
               before heading to Tajikistan.
             </p>
+
+            <div class="stop-photos" aria-label="Photo of Jamie as a baby">
+              <figure class="stop-photo">
+                <img
+                  src="images/Jamie%20baby.jpeg"
+                  alt="Jamie as a baby in England"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
             <p class="candy-note">Represented by Cadbury Heroes.</p>
           </div>
         </article>
@@ -475,9 +495,20 @@ permalink: /sweet-journey/index.html
               <span class="stop-label">Jamie's childhood home</span>
             </div>
             <p>
-              Jamie grew up in Tajikistan. Fizzy Boom was one of the treats he
-              enjoyed while growing up there.
+              Jamie grew up in Tajikistan, with trips back to the US about every
+              3 years.
             </p>
+
+            <div class="stop-photos" aria-label="Photo of Jamie in Tajikistan">
+              <figure class="stop-photo">
+                <img
+                  src="images/Jamie%20Tajikistan.jpeg"
+                  alt="Jamie in Tajikistan"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
             <p class="candy-note">
               Represented by Fizzy Boom. (Fizzy Boom is made in Ukraine, but
               popular in Tajikistan.)
@@ -511,6 +542,28 @@ permalink: /sweet-journey/index.html
               there for eleventh and twelfth grade, while Jamie attended from
               ninth through twelfth grade.
             </p>
+
+            <div
+              class="stop-photos"
+              aria-label="Photos of Jamie and Anna in Germany"
+            >
+              <figure class="stop-photo">
+                <img
+                  src="images/Jamie%20and%20Anna%20banquet.jpg"
+                  alt="Jamie and Anna at banquet"
+                  loading="lazy"
+                />
+              </figure>
+
+              <figure class="stop-photo">
+                <img
+                  src="images/Jamie%20and%20Anna%20grad.jpeg"
+                  alt="Jamie and Anna at graduation"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
             <p class="candy-note">Represented by Haribo Gummy Bears.</p>
           </div>
         </article>
@@ -545,22 +598,29 @@ permalink: /sweet-journey/index.html
             also where Jamie and Anna are attending college, and where they are
             getting married.
           </p>
+
+          <div
+            class="stop-photos"
+            aria-label="Photo of Jamie and Anna in the United States"
+          >
+            <figure class="stop-photo">
+              <img
+                src="images/Jamie%20and%20Anna%20US.jpeg"
+                alt="Jamie and Anna in the United States"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+
           <p class="candy-note">Represented by M&amp;Ms.</p>
         </div>
       </article>
 
-      <section class="destination" aria-labelledby="destination-heading">
-        <div class="code" aria-hidden="true">CLT</div>
-        <h2 id="destination-heading">Destination: Charlotte</h2>
-        <p>
-          These seven countries are a part of who Jamie and Anna are. Charlotte
-          is where those two journeys join. We hope that their years together
-          are filled with love, adventure, and joy.
-        </p>
-      </section>
-
       <footer class="closing">
-        <p></p>
+        <p>
+          Jamie and Anna's sweet journey continues in the Carolinas. We hope
+          that their years together are filled with love, adventure, and joy.
+        </p>
         <p class="signature">Thank you for celebrating with Jamie and Anna.</p>
         <p class="small-print">
           This temporary page was created for Jamie and Anna's rehearsal dinner.

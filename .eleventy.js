@@ -43,6 +43,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
   eleventyConfig.addPassthroughCopy({ "src/favicon.svg": "favicon.svg" });
   eleventyConfig.addPassthroughCopy({
+    "src/sweet-journey/images": "sweet-journey/images",
+  });
+  eleventyConfig.addPassthroughCopy({
     "external/greek-verbs/index.html": "greek-verbs/index.html",
   });
   eleventyConfig.addPassthroughCopy({
